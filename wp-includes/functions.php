@@ -28,51 +28,6 @@ require ABSPATH . WPINC . '/option.php';
  *                          False on failure.
  */
 
-function enqueue_datepicker() {
-    wp_enqueue_script('jquery-ui-datepicker');
-    wp_enqueue_style('jquery-ui-css', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
-}
-add_action('wp_enqueue_scripts', 'enqueue_datepicker');
-
-function handle_booking_form_submission() {
-    // Check for nonce security
-    check_ajax_referer('my_booking_action', 'booking_nonce');
-    
-    // Sanitize and validate inputs
-    $start_date = sanitize_text_field($_POST['start_date']);
-    $end_date = sanitize_text_field($_POST['end_date']);
-
-    // Validate dates
-    $start_date_obj = DateTime::createFromFormat('Y-m-d', $start_date);
-    $end_date_obj = DateTime::createFromFormat('Y-m-d', $end_date);
-
-    if (!$start_date_obj || $start_date_obj->format('Y-m-d') !== $start_date) {
-        wp_send_json_error('Invalid start date');
-    }
-
-    if (!$end_date_obj || $end_date_obj->format('Y-m-d') !== $end_date) {
-        wp_send_json_error('Invalid end date');
-    }
-
-    // Insert the booking into your database safely
-    global $wpdb;
-    $table_name = $wpdb->prefix . 'custom_bookings';
-    
-    $wpdb->insert($table_name, array(
-        'start_date' => $start_date,
-        'end_date' => $end_date,
-        // Include other fields as necessary
-    ), array('%s', '%s')); // The data format, %s means string
-
-    if ($wpdb->insert_id) {
-        wp_send_json_success('Booking successful');
-    } else {
-        wp_send_json_error('Booking failed');
-    }
-
-    wp_die();
-}
-
 function mysql2date( $format, $date, $translate = true ) {
 	if ( empty( $date ) ) {
 		return false;
