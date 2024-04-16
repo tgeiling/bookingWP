@@ -1,0 +1,3 @@
+<?php
+		$shortcode='['.PLUGIN_BCBS_CONTEXT.'_booking_form booking_form_id="'.(int)$this->data['instance']['booking_form_id'].'" widget_booking_form_style_id="'.(int)$this->data['instance']['booking_form_style_id'].'"  widget_mode="1" widget_booking_form_url="'.esc_url($this->data['instance']['booking_form_url']).'" widget_booking_form_url="'.esc_url($this->data['instance']['booking_form_url']).'" boat_id="'.(int)$this->data['instance']['boat_id'].'"]';
+		echo ($this->data['html']['start'].do_shortcode($shortcode).$this->data['html']['stop']);

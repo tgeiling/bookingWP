@@ -1,0 +1,3543 @@
+/* 
+-   Base
+-   Font
+-	Header
+-   Icon
+-	Icon list
+-	State
+-   Transition
+-   Main
+-   Label
+-   Qtip
+-   Button 
+-   Button navigation
+-   File upload
+-   Selectmenu
+-   Timepicker
+-   Datepicker
+-   Preloader 
+-   Layout
+    -   Layout / Layout 50x50
+    -   Layout / Layout 33x33x33
+    -   Layout / Layout 25x75
+    -   Layout / Layout 75x25
+- 	Step
+-   Main navigation
+    -   Main navigation / Default
+    -   Main navigation / Responsive
+-   Form panel
+-   Disable section  
+-   Form checkbox
+-   Form field 
+- 	Marina selected 
+-   Boat list 
+-   Boat
+    -	Boat / Layout
+	-	Boat / Name
+	- 	Boat / Category
+	-	Boat / Meta
+	-	Boat / Less/More Button
+	-	Boat / Captain status
+	-	Boat / Price
+	-	Boat / Select button
+	-	Boat / Attribute
+-   Google Map
+-   Summary
+-   Summary price
+-   Payment
+-   Agreement
+-   Coupon
+-   Client form
+-   Booking extra
+-   Booking complete
+-   Marina detail frame
+    -   Marina detail frame / Layout
+    -   Marina detail frame / Marina name
+    -   Marina detail frame / Button	
+-   Responsive
+	-   Responsive / Header
+    -   Responsive / Layout 
+    -   Responsive / Main navigation
+    -   Responsive / Step
+    -   Responsive / Button
+    -   Responsive / Button navigation 
+    -   Responsive / Boat
+		-   Responsive / Boat / Layout
+		-   Responsive / Boat / Button
+	-   Responsive / Boat / Attribute
+    -   Responsive / Booking extra
+    -   Responsive / Payment
+	-	Responsive / Marina info frame
+    -   Responsive / Summary
+    -   Responsive / Summary price element
+	-   Responsive / Summary field
+    -   Responsive / Form field
+    -   Responsive / Screen size
+-   WooCommerce
+-   Bug fixes 
+-   Widget
+*/
+
+/******************************************************************************/
+/* Base                                                                       */
+/******************************************************************************/
+
+.bcbs-main *,
+.bcbs-main.ui-datepicker,
+.bcbs-main.ui-datepicker *,
+.bcbs-main .ui-timepicker-wrapper,
+.bcbs-main .ui-timepicker-wrapper *,
+.bcbs-main .ui-selectmenu-button span.ui-selectmenu-text
+{
+    outline:0;
+    line-height:150%;
+    box-sizing:border-box;
+}
+
+.bcbs-main .bcbs-clear-fix:after
+{
+	height:0;
+	clear:both;
+	content:" ";
+	font-size:0;
+	display:block;
+	visibility:hidden;
+}
+
+* html .bcbs-clear-fix
+{
+	zoom:1; 
+} 
+
+.bcbs-main .bcbs-list-reset
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+.bcbs-main .bcbs-align-right
+{
+    text-align:right;
+}
+
+.bcbs-main .bcbs-hidden,
+.bcbs-main.bcbs-hidden
+{
+    display:none !important;
+}
+
+.bcbs-main .ui-timepicker-wrapper
+{
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;  
+}
+
+.bcbs-main.ui-datepicker,
+.bcbs-main .bcbs-box-shadow,
+.bcbs-main .ui-selectmenu-menu,
+.bcbs-main .ui-timepicker-wrapper
+{
+	-webkit-box-shadow:0px 28px 18px -20px rgba(85,113,135,0.12);
+	-moz-box-shadow:0px 28px 18px -20px rgba(85,113,135,0.12);
+	box-shadow:0px 28px 18px -20px rgba(85,113,135,0.12);
+}
+
+.bcbs-main img
+{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.bcbs-main a,
+.bcbs-main a:hover
+{
+    box-shadow:none;
+    text-decoration:none;
+}
+
+.bcbs-main label
+{
+    margin-bottom:0px;
+}
+
+.bcbs-main input[type="submit"]
+{
+    cursor:pointer;
+}
+
+.bcbs-booking-form-error
+{
+    color:red;
+}
+
+.theiaStickySidebar
+{
+	max-width:100% !important;
+}
+
+/******************************************************************************/
+/* Font                                                                       */
+/******************************************************************************/
+
+.bcbs-main,
+.bcbs-main input,
+.bcbs-main select,
+.bcbs-main textarea,
+.bcbs-main .ui-selectmenu-menu
+{
+    font-family:'Source sans pro';
+}
+
+.bcbs-main label,
+.bcbs-main .bcbs-form-field>label a,
+.bcbs-main .bcbs-ride-info>div>span:first-child+span
+{
+	font-family:'Lato';
+}
+
+.bcbs-main h2,
+.bcbs-main h3,
+.bcbs-main h4,
+.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr th,
+.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr td
+{
+	font-family:'Jost';
+}
+
+.bcbs-main,
+.bcbs-main a,
+.bcbs-main .ui-timepicker-wrapper,
+.bcbs-main .bcbs-quantity>input,
+.bcbs-main .ui-selectmenu-menu
+{
+    font-size:16px;
+    font-weight:400;
+}
+
+/******************************************************************************/
+/* Header                                                                       */
+/******************************************************************************/
+
+.bcbs-main h2,
+.bcbs-main h3,
+.bcbs-main h4
+{
+	margin:0px;
+}
+
+.bcbs-main h2
+{
+	font-weight:600;
+	font-size:32px;
+	line-height:40px;
+	margin-bottom:40px;
+}
+
+.bcbs-main h3
+{
+	font-size:24px;
+	font-weight:600;
+	line-height:34px;
+	margin-bottom:40px;
+}
+
+.bcbs-main h4
+{
+	font-weight:600;
+	font-size:18px;
+	line-height:28px;
+	margin-bottom:40px;
+}
+
+/******************************************************************************/
+/* Icon                                                                       */
+/******************************************************************************/
+    
+@font-face 
+{
+    font-family:'bcbs-meta-icon-16';
+    src:url('../font/meta-icon-16.eot');
+    src:url('../font/meta-icon-16.eot') format('embedded-opentype'),url('../font/meta-icon-16.ttf') format('truetype'),url('../font/meta-icon-16.woff') format('woff'),url('../font/meta-icon-16.svg') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face 
+{
+    font-family:'bcbs-meta-icon-24';
+    src:url('../font/meta-icon-24.eot');
+    src:url('../font/meta-icon-24.eot') format('embedded-opentype'),url('../font/meta-icon-24.ttf') format('truetype'),url('../font/meta-icon-24.woff') format('woff'),url('../font/meta-icon-24.svg') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face 
+{
+    font-family:'bcbs-meta-icon-96';
+    src:url('../font/meta-icon-96.eot');
+    src:url('../font/meta-icon-96.eot') format('embedded-opentype'),url('../font/meta-icon-96.ttf') format('truetype'),url('../font/meta-icon-96.woff') format('woff'),url('../font/meta-icon-96.svg') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+[class^="bcbs-meta-icon-16-"],
+[class*=" bcbs-meta-icon-16-"],
+.bcbs-main .bcbs-quantity>a.bcbs-quantity-plus:before,
+.bcbs-main .bcbs-quantity>a.bcbs-quantity-minus:before
+{
+    font-family:'bcbs-meta-icon-16' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+[class^="bcbs-meta-icon-24-"],
+[class*=" bcbs-meta-icon-24-"],
+.bcbs-main .bcbs-list-icon>li:before,
+.bcbs-main.ui-datepicker .ui-datepicker-prev,
+.bcbs-main.ui-datepicker .ui-datepicker-next
+{
+    font-family:'bcbs-meta-icon-24' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+[class^="bcbs-meta-icon-96-"],
+[class*=" bcbs-meta-icon-96-"]
+{
+    font-family:'bcbs-meta-icon-96' !important;
+    speak:none;
+    font-style:normal;
+    font-weight:normal;
+    font-variant:normal;
+    text-transform:none;
+    line-height:1;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.bcbs-main .bcbs-meta-icon-16-yacht:before 
+{
+    content:"\61";
+}
+
+.bcbs-main .bcbs-meta-icon-16-location-small:before 
+{
+    content:"\69";
+}
+
+.bcbs-main .bcbs-meta-icon-16-anchor-small:before 
+{
+    content:"\68";
+}
+
+.bcbs-main .bcbs-meta-icon-16-cabin:before 
+{
+    content:"\66";
+}
+
+.bcbs-main .bcbs-meta-icon-16-details:before 
+{
+    content:"\64";
+}
+
+.bcbs-main .bcbs-meta-icon-16-guests:before 
+{
+    content:"\65";
+}
+
+.bcbs-main .bcbs-meta-icon-16-minus:before,
+.bcbs-main .bcbs-quantity>a.bcbs-quantity-minus:before
+{
+    content:"\63";
+}
+
+.bcbs-main .bcbs-meta-icon-16-plus:before,
+.bcbs-main .bcbs-quantity>a.bcbs-quantity-plus:before
+{
+    content:"\62";
+}
+
+.bcbs-main .bcbs-meta-icon-16-width:before 
+{
+    content:"\67";
+}
+
+.bcbs-main .bcbs-meta-icon-24-anchor:before 
+{
+    content:"\6b";
+}
+
+.bcbs-main .bcbs-meta-icon-24-date:before 
+{
+    content:"\69";
+}
+
+.bcbs-main .bcbs-meta-icon-24-duration:before 
+{
+    content:"\6a";
+}
+
+.bcbs-main .bcbs-meta-icon-24-location:before 
+{
+    content:"\68";
+}
+
+.bcbs-main .bcbs-meta-icon-24-question:before 
+{
+    content:"\67";
+}
+
+.bcbs-main .bcbs-meta-icon-24-arrow-horizontal-small:before 
+{
+    content:"\66";
+}
+
+.bcbs-main .bcbs-meta-icon-24-arrow-vertical-small:before 
+{
+    content:"\65";
+}
+
+.bcbs-main .bcbs-meta-icon-24-close:before 
+{
+    content:"\64";
+}
+
+.bcbs-main .bcbs-meta-icon-24-tick:before,
+.bcbs-main .bcbs-list-icon>li:before
+{
+    content:"\63";
+}
+
+.bcbs-main.ui-datepicker .ui-datepicker-prev:before,
+.bcbs-main.ui-datepicker .ui-datepicker-next:before,
+.bcbs-main .bcbs-meta-icon-24-arrow-horizontal:before 
+{
+    content:"\61";
+}
+
+.bcbs-main .bcbs-meta-icon-24-arrow-vertical:before 
+{
+    content:"\62";
+}
+
+.bcbs-main .bcbs-meta-icon-96-summary:before 
+{
+    content:"\61";
+}
+
+/******************************************************************************/
+/* Icon list                                                                  */
+/******************************************************************************/
+
+.bcbs-main .bcbs-list-icon
+{
+	padding:0px;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	list-style-type:none;
+	margin:20px 0px 20px 0px;
+}
+
+.bcbs-main.bcbs-width-300 .bcbs-list-icon,
+.bcbs-main.bcbs-widthlt-300 .bcbs-list-icon
+{
+	flex-direction:column;
+}
+
+	.bcbs-main .bcbs-list-icon>li:before
+	{
+		width:13px;
+		height:13px;
+		font-size:10px;
+		line-height:13px;
+		text-align:center;
+		margin-right:10px;
+		border-radius:999em;
+		display:inline-block;		
+	}
+
+	.bcbs-main .bcbs-list-icon>li
+	{
+		width:33.33333%;
+	}
+	
+	.bcbs-main.bcbs-width-300 .bcbs-list-icon>li,
+	.bcbs-main.bcbs-widthlt-300 .bcbs-list-icon>li
+	{
+		width:100%;
+	}
+
+/******************************************************************************/
+/* State                                                                      */
+/******************************************************************************/
+
+.bcbs-state-disabled,
+.bcbs-state-readonly
+{
+	overflow:hidden;
+	position:relative;
+}
+
+	.bcbs-state-disabled::after,
+	.bcbs-state-readonly::after
+	{
+		top:0px;
+		left:0px;
+		width:100%;
+		content:"";
+		opacity:0;
+		height:999em;
+		display:block;
+		position:absolute;
+		background:#FFFFFF;
+		cursor:not-allowed;
+	}
+
+/******************************************************************************/
+/* Transition                                                                 */
+/******************************************************************************/
+
+.bcbs-main .bcbs-quantity>a,
+.bcbs-main .bcbs-quantity>a:hover,
+.bcbs-main .bcbs-button.bcbs-button-style-1,
+.bcbs-main .bcbs-button.bcbs-button-style-2,
+.bcbs-main .bcbs-button.bcbs-button-style-3,
+.bcbs-main .bcbs-button.bcbs-button-style-4,
+.bcbs-main .bcbs-button.bcbs-button-style-1:hover,
+.bcbs-main .bcbs-button.bcbs-button-style-2:hover,
+.bcbs-main .bcbs-button.bcbs-button-style-3:hover,
+.bcbs-main .bcbs-button.bcbs-button-style-4:hover,
+.bcbs-main .bcbs-boat .bcbs-boat-content>.bcbs-boat-content-meta a>span+span,
+.bcbs-main .bcbs-boat .bcbs-boat-content>.bcbs-boat-content-meta a:hover>span+span,
+.bcbs-main.ui-datepicker .ui-datepicker-prev,
+.bcbs-main.ui-datepicker .ui-datepicker-next,    
+.bcbs-main.ui-datepicker .ui-datepicker-prev.ui-state-hover,
+.bcbs-main.ui-datepicker .ui-datepicker-next.ui-state-hover   
+{
+    transition:all 150ms ease;
+}
+
+.bcbs-main .bcbs-boat .bcbs-boat-content>.bcbs-boat-content-meta a>span,
+.bcbs-main .bcbs-boat .bcbs-boat-content>.bcbs-boat-content-meta a:hover>span
+{
+    transition:background-color 150ms ease;
+}
+
+/******************************************************************************/
+/* Main                                                                       */
+/******************************************************************************/
+
+.bcbs-main
+{
+    position:relative;
+}
+
+    .bcbs-main .bcbs-main-content
+    {
+        margin-top:50px;
+    }
+    
+    .bcbs-main .bcbs-main-content>div
+    {
+        display:none;
+    }
+    
+    .bcbs-main .bcbs-main-content>div:first-child
+    {
+        display:block;
+    }
+    
+    .bcbs-main .bcbs-main-content>div>div:last-child
+    {
+        margin-top:50px;
+    }
+
+/******************************************************************************/
+/* Label                                                                      */
+/******************************************************************************/
+
+.bcbs-main label,
+.bcbs-main .bcbs-form-field>label a,
+.bcbs-main .bcbs-ride-info>div>span:first-child+span
+{
+    font-size:12px;
+    font-weight:400;
+    text-transform:uppercase;
+}
+
+.bcbs-main .bcbs-form-field>label a,
+.bcbs-main .bcbs-form-field>label a:hover
+{
+    text-decoration:underline;
+}
+
+.bcbs-main .bcbs-form-field>label a:hover
+{
+    opacity:0.6;
+}
+
+/******************************************************************************/
+/* Qtip         															  */
+/******************************************************************************/
+
+.bcbs-main .bcbs-qtip
+{
+    margin:0px 0px 0px 0px !important;
+}
+
+.bcbs-main .bcbs-qtip,
+.bcbs-main .bcbs-notice
+{
+    margin:0px;
+    padding:0px;
+    border:none;
+    box-shadow:none;
+    min-width:200px;
+    border-width:1px;
+    border-style:solid;	
+}
+
+.bcbs-main .bcbs-notice,
+.bcbs-main .bcbs-qtip .qtip-content
+{
+    font-size:13px;
+    font-weight:300;
+    padding:8px 15px 10px 15px;
+}
+   
+.bcbs-main .bcbs-notice
+{
+    width:100%;
+    margin:0px 0px 40px 0px;
+}
+
+/******************************************************************************/
+/* Button                                                                     */
+/******************************************************************************/
+
+.bcbs-main .bcbs-button,
+.bcbs-main .bcbs-button:hover
+{
+	cursor:pointer;
+    text-decoration:none;
+}
+
+.bcbs-main .bcbs-button.bcbs-button-style-1,
+.bcbs-main .bcbs-button.bcbs-button-style-2,
+.bcbs-main .bcbs-button.bcbs-button-style-3,
+.bcbs-main .bcbs-button.bcbs-button-style-4
+{
+    border-width:1px;
+    border-style:solid;
+    border-radius:4px;
+    padding:14px 32px 15px 32px;
+}
+
+.bcbs-main .bcbs-button.bcbs-button-style-3
+{
+	-webkit-box-shadow:0px 28px 18px -20px rgba(85,113,135,0.17);
+	-moz-box-shadow:0px 28px 18px -20px rgba(85,113,135,0.17);
+	box-shadow:0px 28px 18px -20px rgba(85,113,135,0.17);	
+}
+
+.bcbs-main .bcbs-button.bcbs-button-style-3.bcbs-state-selected
+{
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+}
+
+    .bcbs-main .bcbs-button.bcbs-button-step-next>span,
+    .bcbs-main .bcbs-button.bcbs-button-step-prev>span
+    {
+        top:3px;
+        font-size:25px;
+        position:relative;
+        padding-left:12px;
+        display:inline-block;
+		vertical-align:text-bottom;
+    }
+    
+    .bcbs-main .bcbs-button.bcbs-button-step-prev>span
+    {
+        transform:scaleX(-1);
+        -moz-transform:scaleX(-1);
+        -o-transform:scaleX(-1);
+        -webkit-transform:scaleX(-1);
+        transform:scaleX(-1);
+        filter:FlipH;
+        -ms-filter:"FlipH";
+    }
+  
+.bcbs-main .bcbs-button.bcbs-button-step-prev
+{
+    padding:14px 32px 18px 24px;
+}
+
+.bcbs-main .bcbs-button.bcbs-button-step-next
+{
+	padding:14px 24px 18px 32px;
+}
+    
+.bcbs-main .bcbs-button span.bcbs-meta-icon-tick
+{
+    display:none;
+}
+    
+.bcbs-main .bcbs-button.bcbs-state-selected span.bcbs-meta-icon-tick
+{
+    display:inline-block;
+}
+
+/******************************************************************************/
+/* Button navigation                                                          */
+/******************************************************************************/
+
+.bcbs-main .bcbs-main-content-navigation-button
+{
+ 
+}
+	.bcbs-main .bcbs-main-content-navigation-button a
+	{
+		width:auto;
+		display:inline-block;
+	}
+
+    .bcbs-main .bcbs-main-content-navigation-button .bcbs-button.bcbs-button-step-prev
+    {
+        float:left;
+    }
+
+    .bcbs-main .bcbs-main-content-navigation-button .bcbs-button.bcbs-button-step-next
+    {
+        float:right;
+    }
+	
+/******************************************************************************/
+/* File upload		                                                          */
+/******************************************************************************/
+
+.bcbs-file-upload
+{
+	overflow:hidden;
+	position:relative;
+	display:inline-block;
+}
+
+.bcbs-form-field .bcbs-file-upload,
+.bcbs-form-field .bcbs-file-remove
+{
+	margin:10px 0px 20px 20px;
+}
+
+.bcbs-form-field .bcbs-file-upload
+{
+	margin-bottom:15px;
+}
+
+	.bcbs-file-upload>span
+	{	
+		
+	}
+
+	.bcbs-file-upload input[type="file"]
+	{
+		top:0px;
+		left:0px;
+		opacity:0;
+		cursor:pointer;
+		position:absolute;
+		font-size:200px !important;
+	}
+
+.bcbs-form-field .bcbs-file-remove
+{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+	.bcbs-form-field .bcbs-file-remove>span
+	{
+		display:table-cell;
+	}
+	
+	.bcbs-form-field .bcbs-file-remove>span:first-child
+	{
+		padding-right:15px;
+	}
+	
+		.bcbs-form-field .bcbs-file-remove>span:first-child>span
+		{
+			font-weight:bold;
+			padding-left:5px;
+		}
+
+/******************************************************************************/
+/* Selectmenu                                                                 */
+/******************************************************************************/
+
+.bcbs-main .ui-selectmenu-button
+{
+    display:block;
+	overflow:visible;
+    width:100% !important;
+    padding:0px 20px 18px 20px;
+}
+
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none)
+{
+    .bcbs-main .ui-selectmenu-button
+    {
+        padding-bottom:15px;
+    }
+}
+
+    .bcbs-main .ui-selectmenu-button .ui-selectmenu-text
+    {
+        padding:1px 0px 0px 0px;
+    }
+    
+    .bcbs-main .ui-selectmenu-button .bcbs-meta-icon-24-arrow-vertical
+    {
+        float:right;
+        margin-top:-8px;
+		font-size:18px;
+        transform:scaleY(-1);
+    }
+    
+.bcbs-main .ui-menu
+{
+    padding:0px;
+}
+
+    .bcbs-main .ui-menu .ui-menu-item
+    {
+        border-style:solid;
+        padding:10px 20px 10px 20px;
+        border-width:1px 0px 0px 0px;
+    }
+    
+    .bcbs-main .ui-menu .ui-menu-item:first-child
+    {
+        border-width:0px;
+    }
+    
+    .bcbs-main .ui-menu .ui-state-focus,
+    .bcbs-main .ui-menu .ui-state-active
+    {
+        margin:0px;
+    }
+        
+.bcbs-main .ui-selectmenu-menu
+{
+    max-height:204px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    border-width:1px;
+    border-style:solid;
+}
+
+/******************************************************************************/
+/* Timepicker                                                                 */
+/******************************************************************************/
+  
+.bcbs-main .ui-timepicker-wrapper
+{
+    opacity:0;
+    z-index:2;
+    height:226px;
+    max-height:226px;
+    margin-left:-1px;
+}
+
+    .bcbs-main .ui-timepicker-wrapper .ui-timepicker-list
+    {
+        
+    }
+    
+        .bcbs-main .ui-timepicker-wrapper .ui-timepicker-list>li
+        {
+            border-style:solid;
+            padding:10px 20px 10px 20px;
+            border-width:1px 0px 0px 0px;
+        }
+        
+            .bcbs-main .ui-timepicker-wrapper .ui-timepicker-list>li:first-child
+            {
+                border-width:0px;
+            }
+			
+.ui-timepicker-disabled
+{
+	display:none;
+}
+            
+/******************************************************************************/
+/* Datepicker                                                                 */
+/******************************************************************************/            
+
+.bcbs-main.ui-datepicker
+{
+    z-index:3;
+    width:auto;
+    margin-left:-1px;
+    border-width:1px;
+    border-style:solid;
+    padding:20px 20px 24px 20px;
+}
+
+	html .bcbs-main.ui-widget-content .ui-icon,
+	html .bcbs-main.ui-widget-header .ui-icon
+	{
+		background:none;
+	}
+
+	html .bcbs-main.ui-datepicker .ui-datepicker-header
+	{
+		padding:0px;
+	}
+	
+	html .bcbs-main.ui-widget-header
+	{
+		border:0px;
+	}
+
+    .bcbs-main.ui-datepicker .ui-datepicker-title
+    {
+        margin:0px;
+		line-height:40px;
+    }
+    
+    .bcbs-main.ui-datepicker .ui-datepicker-today a
+    {
+        text-decoration:underline;
+    }
+    
+	.bcbs-main.ui-datepicker table
+	{
+		font-size:inherit;
+	}
+	
+    .bcbs-main.ui-datepicker thead
+    {
+        border-style:solid;
+        border-width:0px 0px 1px 0px;
+    }
+    
+    .bcbs-main.ui-datepicker tbody
+    {
+        top:10px;
+        position:relative;
+    }
+    
+    .bcbs-main.ui-datepicker th,
+    .bcbs-main.ui-datepicker td,
+    .bcbs-main.ui-datepicker td a,
+    .bcbs-main.ui-datepicker td span
+    {
+        line-height:1;
+    }
+    
+    .bcbs-main.ui-datepicker th
+    {
+		font-weight:400;
+        text-align:center;
+		background-image:none;
+        text-transform:uppercase;
+        padding:20px 0px 20px 0px;
+    }
+    
+    .bcbs-main.ui-datepicker td
+    {
+        padding:0px !important;
+		border:none !important;
+    }
+    
+        html .bcbs-main.ui-datepicker td a,
+        html .bcbs-main.ui-datepicker td span
+        {
+			padding:0px;
+			text-align:center;
+            width:48px !important;
+            height:48px !important;
+			line-height:48px !important;
+        }
+
+        .bcbs-main.ui-datepicker td a.ui-state-hover
+        {
+            border-width:2px;
+            border-style:solid;
+            border-radius:9999em;
+			line-height:44px !important;
+        }
+        
+.bcbs-main.ui-datepicker .ui-datepicker-prev,
+.bcbs-main.ui-datepicker .ui-datepicker-next
+{
+    width:40px;
+    height:40px;
+    display:block;
+    cursor:pointer;
+    line-height:40px;
+    border-width:1px;
+    text-align:center;
+    border-style:solid;
+    border-radius:9999em;
+}
+
+	.bcbs-main.ui-datepicker .ui-datepicker-prev span,
+	.bcbs-main.ui-datepicker .ui-datepicker-next span
+	{
+		font-size:18px;
+	}
+
+.bcbs-main.ui-datepicker .ui-datepicker-prev,
+.bcbs-main.ui-datepicker .ui-datepicker-next,
+.bcbs-main.ui-datepicker .ui-datepicker-prev-hover,
+.bcbs-main.ui-datepicker .ui-datepicker-next-hover
+{
+    top:0px;
+}
+
+.bcbs-main.ui-datepicker .ui-datepicker-prev,
+.bcbs-main.ui-datepicker .ui-datepicker-prev-hover
+{
+    left:0px;
+    margin-left:7px;
+}
+
+.bcbs-main.ui-datepicker .ui-datepicker-next,
+.bcbs-main.ui-datepicker .ui-datepicker-next-hover
+{
+    right:0px;
+    margin-right:7px;
+}
+
+.bcbs-main.ui-datepicker .ui-datepicker-prev
+{
+    transform:scaleX(-1);
+}
+
+/******************************************************************************/
+/* Preloader                                                                  */
+/******************************************************************************/    
+
+#bcbs-preloader,
+#bcbs-boat-availability-calendar-preloader
+{
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:100;
+    display:none;
+    opacity:0.2;
+    cursor:wait;
+    position:absolute;
+    background:#FFFFFF
+}
+
+/******************************************************************************/
+/* Layout                                                                     */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Layout / Layout 50x50                                                  */
+    /**************************************************************************/
+
+    .bcbs-main .bcbs-layout-50x50
+    {
+        
+    }
+    
+        .bcbs-main .bcbs-layout-50x50>.bcbs-layout-column-left,
+        .bcbs-main .bcbs-layout-50x50>.bcbs-layout-column-right
+        {
+            width:48.36066%;
+        }
+    
+        .bcbs-main .bcbs-layout-50x50>.bcbs-layout-column-left
+        {
+            float:left;
+        }
+        
+        .bcbs-main .bcbs-layout-50x50>.bcbs-layout-column-right
+        {
+            float:right;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 33x33x33                                               */
+    /**************************************************************************/
+        
+    .bcbs-main .bcbs-layout-33x33x33
+    {
+        
+    }
+    
+        .bcbs-main .bcbs-layout-33x33x33>.bcbs-layout-column-left,
+        .bcbs-main .bcbs-layout-33x33x33>.bcbs-layout-column-center,
+        .bcbs-main .bcbs-layout-33x33x33>.bcbs-layout-column-right
+        {
+            float:left;
+            width:31.1477%;
+        }
+            
+        .bcbs-main .bcbs-layout-33x33x33>.bcbs-layout-column-left,
+        .bcbs-main .bcbs-layout-33x33x33>.bcbs-layout-column-center
+        {
+            margin-right:3.2784%;
+        }
+
+    /**************************************************************************/
+    /* Layout / Layout 25x75                                                  */
+    /**************************************************************************/
+
+    .bcbs-main .bcbs-layout-25x75
+    {
+        
+    }
+    
+        .bcbs-main .bcbs-layout-25x75>.bcbs-layout-column-left
+        {
+            float:left;
+            width:22.5410%;
+        }
+
+        .bcbs-main .bcbs-layout-25x75>.bcbs-layout-column-right
+        {
+            float:right;
+            width:74.18033%;
+        }
+        
+    /**************************************************************************/
+    /* Layout / Layout 75x25                                                  */
+    /**************************************************************************/
+
+    .bcbs-main .bcbs-layout-75x25
+    {
+        
+    }
+    
+        .bcbs-main .bcbs-layout-75x25>.bcbs-layout-column-left
+        {
+            float:left;
+            width:73.7705%;
+        }
+
+        .bcbs-main .bcbs-layout-75x25>.bcbs-layout-column-right
+        {
+            float:right;
+            width:22.5410%;
+        }
+        
+/******************************************************************************/
+/* Step                                                                       */
+/******************************************************************************/       
+  
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50
+{
+    display:flex;
+}
+
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-left
+{
+    border-width:1px;
+    border-style:solid;
+	padding:44px 40px 40px 40px;
+}
+
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-left,
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-right
+{
+    width:50%;
+}
+
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-1 .bcbs-layout-column-left>div:last-child a
+{
+	width:100%;
+	display:block;
+	margin-top:40px;
+	text-align:center;
+	padding:19px 20px 21px 20px;
+}
+
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left>h2:after
+{
+	width:30px;
+	height:2px;
+	content:"";
+	display:block;
+	margin-top:20px;
+}
+
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-3>div>.bcbs-layout-column-right h3:first-child
+{
+	margin-top:10px;
+}
+
+.bcbs-main .bcbs-main-content .bcbs-main-content-step-2>.bcbs-layout-25x75>.bcbs-layout-column-right>div:first-child
+{
+	margin-bottom:40px;
+}
+
+/******************************************************************************/
+/* Main navigation                                                            */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Main navigation / Default                                              */
+    /**************************************************************************/
+
+    .bcbs-main .bcbs-main-navigation-default
+    {
+        display:block;
+    }
+
+        .bcbs-main .bcbs-main-navigation-default>ul
+        {
+			list-style:none;
+        }
+
+            .bcbs-main .bcbs-main-navigation-default>ul>li
+            {
+                width:25%;
+                float:left;
+				margin:0px;
+				padding:0px;
+                position:relative;  
+                text-align:center;
+            }
+            
+            .bcbs-main .bcbs-main-navigation-default[data-step-count="3"]>ul>li
+            {
+                width:33.33333333%;
+            }
+
+                .bcbs-main .bcbs-main-navigation-default>ul>li>div
+                {
+                    left:50%;
+                    top:25px;
+                    z-index:1;
+                    height:2px;
+                    width:100%;
+                    position:absolute;
+                }
+                
+                .bcbs-main .bcbs-main-navigation-default>ul>li:last-child>div
+                {
+                    display:none;
+                }
+                
+                .bcbs-main .bcbs-main-navigation-default>ul>li>a
+                {
+                    display:block;
+                }
+
+                .bcbs-main .bcbs-main-navigation-default>ul>li>a,
+                .bcbs-main .bcbs-main-navigation-default>ul>li>a:hover
+                {
+                    text-decoration:none;
+                }
+
+                    .bcbs-main .bcbs-main-navigation-default>ul>li>a>span
+                    {
+                        display:block;
+                        margin-left:auto;
+                        margin-right:auto; 
+                    }
+
+                    .bcbs-main .bcbs-main-navigation-default>ul>li>a>span:first-child
+                    {
+                        z-index:2;
+                        font-weight:700;
+                        position:relative;
+                        text-align:center;
+                        border-width:2px;
+                        border-radius:100%;
+                        border-style:solid;
+						outline:solid 10px transparent;
+                    }
+					
+						.bcbs-main .bcbs-main-navigation-default>ul>li>a>span:first-child>span
+						{
+							display:none;
+						}
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li>a>span:first-child+span
+					{
+						font-size:16px;
+						font-weight:400;
+						line-height:26px;
+					}
+						
+					/***/
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-completed>a>span:first-child
+					{
+						top:7px;
+                        width:36px;
+                        height:36px;					
+					}
+						
+						.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-completed>a>span:first-child>span:first-child
+						{
+							display:block;
+							font-size:22px;
+							margin-top:5px;
+							margin-left:-2px;
+						}
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-completed>a>span:first-child+span
+					{
+						margin-top:29px;	
+					}
+						
+					/***/
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-selected>a>span:first-child
+					{
+                        width:50px;
+                        height:50px;			
+					}
+						
+						.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-selected>a>span:first-child>span:first-child+span
+						{
+							display:block;
+							font-size:32px;
+							padding-top:5px;
+						}
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-selected>a>span:first-child+span
+					{
+						margin-top:15px;			
+					}
+						
+					/***/
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-uncompleted>a>span:first-child
+					{
+						top:7px;
+                        width:36px;
+                        height:36px;
+					}
+						
+						.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-uncompleted>a>span:first-child>span:first-child+span+span
+						{
+							width:12px;
+							height:12px;
+							display:block;
+							border-width:2px;
+							border-radius:100%;
+							border-style:solid;
+							margin-left:auto;
+							margin-right:auto;
+							margin-top:10px;
+						}
+						
+					.bcbs-main .bcbs-main-navigation-default>ul>li.bcbs-state-uncompleted>a>span:first-child+span
+					{
+						margin-top:29px;
+					}
+                
+    /**************************************************************************/
+    /* Main navigation / Responsive                                           */
+    /**************************************************************************/
+
+    .bcbs-main .bcbs-main-navigation-responsive
+    {
+        display:none;
+    }
+    
+        .bcbs-main .bcbs-main-navigation-responsive>.bcbs-form-field
+        {
+            border-top-width:1px;
+        }
+    
+/******************************************************************************/
+/* Form panel                                                                 */
+/******************************************************************************/     
+                    
+.bcbs-form-panel
+{
+    margin-bottom:20px;
+}
+
+.bcbs-form-panel+.bcbs-form-panel
+{
+	margin-top:60px;
+}
+
+.bcbs-form-panel:last-child
+{
+    margin-bottom:0px;
+}
+
+    .bcbs-form-panel .bcbs-form-panel-label
+    {
+        font-size:12px;
+        font-weight:400;
+        position:relative;
+        display:inline-block;
+        text-transform:uppercase;
+        padding:17px 21px 17px 21px;
+    }
+    
+    .bcbs-form-panel .bcbs-form-panel-label,
+    .bcbs-form-panel .bcbs-form-panel-label *
+    {
+       line-height:1; 
+    }
+    
+    .bcbs-form-panel .bcbs-form-panel-content
+    {
+        position:relative;
+        border-style:solid;
+        border-width:1px 0px 0px 0px;
+    }
+   
+/******************************************************************************/
+/* Disable section                                                            */
+/******************************************************************************/        
+    
+.bcbs-disable-section
+{
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    opacity:0.5;
+    position:absolute;
+    background:#FFFFFF;
+}
+
+/******************************************************************************/
+/* Form checkbox                                                              */
+/******************************************************************************/
+
+.bcbs-main .bcbs-form-checkbox
+{
+    float:left;
+    width:30px;
+    height:30px;
+    display:block;
+    cursor:pointer;
+    margin-right:20px;
+    border-width:2px;
+    border-style:solid;
+}
+
+    .bcbs-main .bcbs-form-checkbox>.bcbs-meta-icon-24-tick
+    {
+        display:none;
+        font-size:22px;
+        line-height:28px;
+        text-align:center;
+    }
+    
+    .bcbs-main .bcbs-form-checkbox.bcbs-state-selected>.bcbs-meta-icon-24-tick
+    {
+        display:block;
+    }
+    
+.bcbs-main .bcbs-form-checkbox+span
+{
+    margin-left:30px;
+}
+    
+.bcbs-main .bcbs-form-checkbox+span+input[type="checkbox"]
+{
+    opacity:0;
+}
+
+.bcbs-main .bcbs-form-panel-label .bcbs-form-checkbox
+{
+    top:9px;
+    left:10px;
+    position:absolute;
+}
+
+.bcbs-main .bcbs-form-panel-label .bcbs-form-checkbox+span
+{
+    top:1px;
+    position:relative;
+}
+
+/******************************************************************************/
+/* Form field                                                                 */
+/******************************************************************************/
+
+.bcbs-main .bcbs-form-field
+{
+    position:relative;
+    border-style:solid;
+    padding:16px 0px 0px 0px;
+    border-width:0px 1px 1px 1px;
+}
+
+.bcbs-main .bcbs-form-field.bcbs-form-field-width-50
+{
+    width:50%;
+    float:left;
+}
+
+.bcbs-main .bcbs-form-field.bcbs-form-field-width-33
+{
+    width:33.33333333%;
+    float:left;   
+}
+
+.bcbs-main .bcbs-form-field.bcbs-form-field-width-50+.bcbs-form-field-width-50,
+.bcbs-main .bcbs-form-field.bcbs-form-field-width-33+.bcbs-form-field-width-33
+{
+    border-left-width:0px;
+}
+
+    .bcbs-main .bcbs-form-field>label
+    {
+        clear:both;
+        display:block;
+        margin-bottom:7px;
+        margin-left:20px;
+    }    
+    
+    .bcbs-main .bcbs-form-field>input,
+    .bcbs-main .bcbs-form-field>textarea,
+    .bcbs-main .bcbs-form-field .ui-selectmenu-button
+    {
+        clear:both;
+        width:100%;
+    }
+    
+    .bcbs-main .bcbs-form-field>input,
+    .bcbs-main .bcbs-form-field>select,
+    .bcbs-main .bcbs-form-field>textarea
+    {
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:20px;
+    }
+    
+    .bcbs-main .bcbs-form-field>input,
+    .bcbs-main .bcbs-form-field>textarea,
+    .bcbs-main .bcbs-form-field .ui-selectmenu-button
+    {
+        border:none;
+    }
+    
+    .bcbs-main .bcbs-form-field>input,
+    .bcbs-main .bcbs-form-field>textarea,
+    .bcbs-main .bcbs-form-field .ui-selectmenu-button
+    {
+		font-size:20px;
+		font-weight:600;
+		line-height:28px;
+    }
+
+    .bcbs-main .bcbs-form-field.bcbs-form-field-location-switch>input
+    {
+        padding-right:110px;
+    }
+    
+    .bcbs-main .bcbs-form-field>textarea
+    {
+        resize:none;
+        overflow:auto;
+    }
+    
+    .bcbs-main .bcbs-form-field>input[type="checkbox"]
+    {
+        cursor:pointer;
+    }
+	
+	.bcbs-main .bcbs-form-field.bcbs-form-field-icon
+	{
+		
+	}
+	
+		.bcbs-main .bcbs-form-field.bcbs-form-field-icon>span:first-child
+		{
+			font-size:24px;
+			position:absolute;
+			padding:15px 20px 15px 20px;
+		}
+		
+		.bcbs-main .bcbs-form-field.bcbs-form-field-icon>label,
+		.bcbs-main .bcbs-form-field.bcbs-form-field-icon>input,
+		.bcbs-main .bcbs-form-field.bcbs-form-field-icon>textarea,
+		.bcbs-main .bcbs-form-field.bcbs-form-field-icon .ui-selectmenu-button
+		{
+			margin-left:0px;
+			padding-left:60px;
+		}
+	
+/******************************************************************************/
+/* Marina selected	                                                          */
+/******************************************************************************/
+
+.bcbs-main .bcbs-marina-selected-name
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.bcbs-main .bcbs-marina-selected-address
+{
+	
+}
+
+	.bcbs-main .bcbs-marina-selected-address>span:first-child
+	{
+		font-size:16px;
+		margin-right:5px;
+	}
+
+/******************************************************************************/
+/* Boat list	                                                              */
+/******************************************************************************/
+
+.bcbs-main .bcbs-boat-list
+{
+   
+}
+
+    .bcbs-main .bcbs-boat-list>ul
+    {
+        
+    }
+
+        .bcbs-main .bcbs-boat-list>ul>li
+        {
+            margin-top:20px;
+        }
+        
+        .bcbs-main .bcbs-boat-list>ul>li:first-child
+        {
+            margin-top:0px;
+        }
+
+/******************************************************************************/
+/* Boat		                                                                  */
+/******************************************************************************/
+
+.bcbs-main .bcbs-boat
+{
+
+}
+
+.bcbs-main .bcbs-boat.bcbs-boat-available-0
+{
+	opacity:0.5;
+}
+
+    /**************************************************************************/
+    /* Boat / Layout														  */
+    /**************************************************************************/   	
+
+	.bcbs-main .bcbs-boat .bcbs-layout-r1
+	{
+		display:flex;
+		
+		flex-direction:row;
+	}
+
+	.bcbs-main .bcbs-boat.bcbs-boat-style-2 .bcbs-layout-r1
+	{
+		flex-direction:column;
+	}
+	
+		.bcbs-main .bcbs-boat .bcbs-layout-r1_c1
+		{
+			
+		}	
+		
+		.bcbs-main .bcbs-boat .bcbs-layout-r1_c2
+		{
+			flex-grow:1;
+			display:flex;
+			min-height:250px;
+			flex-direction:column;
+			padding:24px 30px 20px 30px;
+		}	
+		
+			.bcbs-main .bcbs-boat .bcbs-layout-r1_c2>div
+			{
+				flex-grow:0.3333;
+			}
+		
+			.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r1
+			{
+				display:flex;
+				flex-direction:row;	
+				align-items:flex-start;
+			}	
+			
+				/* title */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r1_c1
+				{
+					flex-grow:1;
+				}
+								
+				/* price */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r1_c2
+				{
+
+				}
+			
+			.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r2
+			{
+				display:flex;
+				text-align:left;
+				flex-direction:row;
+				align-items:center;
+			}	
+			
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r2>*
+				{
+					min-width:80px;
+				}
+			
+				/* guest */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r2_c1
+				{
+
+				}	
+				
+				/* cabin */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r2_c2
+				{
+
+				}
+				
+				/* length */ 
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r2_c3
+				{
+
+				}
+				
+				/* button */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r2_c4
+				{
+					flex-grow:1;
+					text-align:right;
+				}
+				
+			.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r3
+			{
+				display:flex;
+				flex-direction:row;
+				align-items:flex-end;
+			}	
+			
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r3>*
+				{
+					flex-grow:1;
+				}
+			
+				/* captain */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r3_c1
+				{
+
+				}	
+				
+				/* less/more button */
+				.bcbs-main .bcbs-boat .bcbs-layout-r1_c2_r3_c2
+				{
+					text-align:right;
+				}	
+	
+	.bcbs-main .bcbs-boat .bcbs-layout-r2
+	{
+		height:0px;
+		overflow:hidden;
+	}
+	
+		.bcbs-main .bcbs-boat .bcbs-layout-r2-c1
+		{
+			display:block;
+		}
+				
+			.bcbs-main .bcbs-boat .bcbs-layout-r2-c1-r1,
+			.bcbs-main .bcbs-boat .bcbs-layout-r2-c1-r2
+			{
+				width:100%;
+				display:flex;
+				margin-top:40px;
+				flex-direction:row;
+			}
+	
+			.bcbs-main .bcbs-boat .bcbs-layout-r2-c1-r1-c1,
+			.bcbs-main .bcbs-boat .bcbs-layout-r2-c1-r2-c1
+			{
+				min-width:210px;
+			}
+
+			.bcbs-main .bcbs-boat .bcbs-layout-r2-c1-r1-c2,
+			.bcbs-main .bcbs-boat .bcbs-layout-r2-c1-r2-c2
+			{
+				width:100%;
+			}		
+
+    /**************************************************************************/
+    /* Boat / Image															  */
+    /**************************************************************************/  	
+	
+    .bcbs-main .bcbs-boat .bcbs-boat-gallery
+    {
+        display:none;
+    }
+	
+	.bcbs-main .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image
+	{
+		opacity:0;
+	}
+
+    .bcbs-main .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image.bcbs-boat-image-has-gallery
+    {
+        cursor:pointer;
+    }
+	
+		.bcbs-main .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image img
+		{
+			max-width:380px;
+		}
+			
+    /**************************************************************************/
+    /* Boat / Name															  */
+    /**************************************************************************/  	
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-name
+	{
+		margin-bottom:0px;
+	}
+	
+    /**************************************************************************/
+    /* Boat / Category														  */
+    /**************************************************************************/  	
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-category
+	{
+		margin-top:5px;
+	}
+	
+    /**************************************************************************/
+    /* Boat / Meta															  */
+    /**************************************************************************/  
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-meta>div>span:first-child
+	{
+		display:block;
+		font-size:16px;		
+	}
+	
+	.bcbs-main .bcbs-boat.bcbs-boat-style-2 .bcbs-boat-meta
+	{
+		margin-top:20px;
+	}
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-meta>div>span:first-child+span
+	{
+		display:block;
+		margin-top:5px;
+	}
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-meta .bcbs-button
+	{
+		display:inline-block;
+	}
+	
+    /**************************************************************************/
+    /* Boat / Less/More Button												  */
+    /**************************************************************************/ 	
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-less-more-button
+	{
+		top:-2px;
+		position:relative;
+	}
+	
+		.bcbs-main .bcbs-boat .bcbs-boat-less-more-button>span
+		{
+			font-size:16px;
+			margin-top:2px;
+			margin-right:7px;
+		}
+		
+		.bcbs-main .bcbs-boat .bcbs-boat-less-more-button>a
+		{
+			
+		}
+		
+			.bcbs-main .bcbs-boat .bcbs-boat-less-more-button>a>span:first-child
+			{
+				
+			}
+			
+			.bcbs-main .bcbs-boat .bcbs-boat-less-more-button>a>span:first-child+span
+			{
+				display:none;
+			}
+			
+			.bcbs-main .bcbs-boat .bcbs-boat-less-more-button.bcbs-state-open>a>span:first-child
+			{
+				display:none;
+			}
+			
+			.bcbs-main .bcbs-boat .bcbs-boat-less-more-button.bcbs-state-open>a>span:first-child+span
+			{
+				display:inline;
+			}
+			
+    /**************************************************************************/
+    /* Boat / Captain status												  */
+    /**************************************************************************/ 				
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-captain-status
+	{
+		
+	}
+	
+	.bcbs-main .bcbs-boat.bcbs-boat-style-2 .bcbs-boat-captain-status
+	{
+		margin-top:20px;
+	}
+			
+		.bcbs-main .bcbs-boat .bcbs-boat-captain-status>span
+		{
+			font-size:16px;
+			margin-right:5px;
+		}
+		
+    /**************************************************************************/
+    /* Boat / Price															  */
+    /**************************************************************************/ 	
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-price
+	{
+		margin-bottom:0px;
+	}
+	
+	.bcbs-main .bcbs-boat .bcbs-boat-price+span
+	{
+		display:block;
+		margin-top:5px;
+		text-align:right;
+	}
+	
+    /**************************************************************************/
+    /* Boat / Select button													  */
+    /**************************************************************************/ 	
+	
+	.bcbs-main .bcbs-boat .bcbs-button
+	{
+		min-width:130px;
+		text-align:center;
+	}
+	
+    /**************************************************************************/
+    /* Boat / Attribute		                                                  */
+    /**************************************************************************/               
+    
+	.bcbs-main .bcbs-boat .bcbs-boat-attribute
+	{
+		width:100%;
+		margin:0px;
+		padding:0px;
+		display:flex;
+		flex-wrap:wrap;
+		margin-top:-20px;
+		flex-direction:row;
+		list-style-type:none;
+	}
+
+		.bcbs-main .bcbs-boat .bcbs-boat-attribute>li
+		{
+			width:33.333%;
+			padding-top:20px;
+			padding-bottom:20px;
+			border-style:solid;
+			border-width:0px 0px 1px 0px;
+		}
+		
+			.bcbs-main .bcbs-boat .bcbs-boat-attribute>li>div:first-child
+			{
+				font-size:14px;
+				font-weight:600;
+				line-height:21px;
+				letter-spacing:1px;
+				text-transform:uppercase;				
+			}
+			
+			.bcbs-main .bcbs-boat .bcbs-boat-attribute>li>div:first-child+div
+			{
+				margin-top:5px;
+			}
+		
+/******************************************************************************/
+/* Google Map                                                                 */
+/******************************************************************************/
+
+.bcbs-main #bcbs_google_map
+{
+    width:100%;
+}
+
+.bcbs-main .bcbs-google-map
+{
+    position:relative;
+}
+
+.bcbs-main .bcbs-google-map #bcbs_google_map
+{
+    height:640px;
+}
+
+.bcbs-main .bcbs-google-map-summary #bcbs_google_map
+{
+    height:250px !important;
+}
+
+/******************************************************************************/
+/* Summary                                                                    */
+/******************************************************************************/
+
+.bcbs-main .bcbs-summary
+{
+    padding:35px 30px 35px 30px;
+}
+
+.bcbs-main .bcbs-summary+.bcbs-summary
+{
+    margin-top:40px;
+}
+
+.bcbs-main .bcbs-summary.bcbs-summary-style-2
+{
+	border-width:1px;
+	border-style:solid;
+}
+
+.bcbs-main .bcbs-summary.bcbs-summary-style-3
+{
+	padding:0px;
+}
+
+    .bcbs-main .bcbs-summary .bcbs-summary-field
+    {
+        margin-top:15px;
+		position:relative;
+        padding-bottom:20px;
+    }
+    
+    .bcbs-main .bcbs-summary .bcbs-summary-field:last-child
+    {
+        padding-bottom:0px;
+    }
+	
+		.bcbs-main .bcbs-summary.bcbs-summary-style-1 .bcbs-summary-field>span:first-child
+		{
+			font-size:24px;
+			position:absolute;
+		}
+    
+        .bcbs-main .bcbs-summary .bcbs-summary-field .bcbs-summary-field-name
+        {
+			top:-5px;
+			font-size:14px;
+			font-weight:600;
+			line-height:21px;
+			letter-spacing:1px;
+			position:relative;
+			text-transform:uppercase;
+        }
+        
+        .bcbs-main .bcbs-summary .bcbs-summary-field .bcbs-summary-field-value
+        {
+   
+        }
+		
+		.bcbs-main .bcbs-summary.bcbs-summary-style-1 .bcbs-summary-field-name,
+		.bcbs-main .bcbs-summary.bcbs-summary-style-1 .bcbs-summary-field-value
+		{
+			margin-left:40px;
+		}
+        
+/******************************************************************************/
+/* Summary price element                                                      */
+/******************************************************************************/
+
+.bcbs-main .bcbs-summary-price-element
+{
+    margin-top:40px;
+	border-width:1px;
+	border-style:solid;
+	padding:40px 30px 40px 30px;
+}
+
+    .bcbs-main .bcbs-summary-price-element>div
+    {
+		margin-top:30px;
+    }
+    
+        .bcbs-main .bcbs-summary-price-element>div span
+        {
+			display:block;
+        }
+
+        .bcbs-main .bcbs-summary-price-element>div>span:first-child
+        {
+            
+        }
+        
+        .bcbs-main .bcbs-summary-price-element>div>span:first-child+span
+        {
+          
+        }
+        
+	.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-total,
+	.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-to-pay,
+	.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-to-balance
+	{
+
+	}
+	
+	.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-total+div,
+	.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-total+div+div
+	{
+		margin-top:10px;
+	}
+
+		.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-total>h4,
+		.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-to-pay>h4,
+		.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-balance>h4
+		{
+			float:left;
+			margin-bottom:0px;
+		}
+
+		.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-total>h4+h4,
+		.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-to-pay>h4+h4,
+		.bcbs-main .bcbs-summary-price-element>div.bcbs-summary-price-element-balance>h4+h4
+		{
+			float:right;
+			margin-bottom:0px;
+		}
+
+/******************************************************************************/
+/* Payment                                                                    */
+/******************************************************************************/
+
+.bcbs-main #bcbs-payment
+{
+    margin-top:60px;
+}
+
+.bcbs-main #bcbs-payment>ul
+{
+	margin:0px;
+	padding:0px;
+	display:block;
+	list-style:none;
+}
+
+    .bcbs-main #bcbs-payment>ul>li
+    {
+        margin-top:20px;
+		text-align:right;
+		padding:43px 30px 43px 30px;
+    }
+    
+    .bcbs-main #bcbs-payment>ul>li:first-child
+    {
+        margin-top:0px;
+    }
+	
+	.bcbs-main #bcbs-payment>ul>li>h4,
+	.bcbs-main #bcbs-payment>ul>li>img
+	{
+		float:left;
+		margin:0px;
+		display:inline-block;
+	}
+	
+	.bcbs-main #bcbs-payment>ul>li>img
+	{
+		margin-top:-12px;
+	}
+     
+/******************************************************************************/
+/* Agreement                                                                  */
+/******************************************************************************/        
+
+.bcbs-main #bcbs-agreement
+{
+    margin-top:60px;
+}
+
+.bcbs-main #bcbs-agreement>ul
+{
+	margin:0px;
+	padding:0px;
+	display:block;
+	list-style:none;
+}
+
+    .bcbs-main #bcbs-agreement>ul>li
+    {
+        margin-top:20px;
+		padding:20px 20px 20px 20px;
+    }
+    
+    .bcbs-main #bcbs-agreement>ul>li:first-child
+    {
+        margin-top:0px;
+    }
+	
+	.bcbs-main #bcbs-agreement>ul>li>span:first-child+span
+	{
+		display:block;
+		margin-top:2px;
+		margin-left:15px;
+	}
+
+/******************************************************************************/
+/* Coupon                                                                     */
+/******************************************************************************/            
+        
+.bcbs-main .bcbs-coupon-code-section
+{
+    margin-top:40px;
+}
+
+    .bcbs-main .bcbs-coupon-code-section .bcbs-form-field
+    {
+        border-top-width:1px;
+    }
+	
+		.bcbs-main .bcbs-coupon-code-section .bcbs-form-field input[type="text"]
+		{
+			padding-right:150px;
+		}
+
+		.bcbs-main .bcbs-coupon-code-section a.bcbs-button.bcbs-button-style-1
+		{
+			top:18px;
+			right:18px;
+			position:absolute;
+		}
+		
+.bcbs-main .bcbs-coupon-code-section+.bcbs-summary-price-element
+{
+	margin-top:-1px;
+}
+    
+/******************************************************************************/
+/* Client form                                                                */
+/******************************************************************************/
+              
+.bcbs-client-form
+{
+    
+}
+
+    .bcbs-client-form .bcbs-client-form-sign-in
+    {
+		margin-bottom:60px;
+    }
+	
+		.bcbs-client-form .bcbs-client-form-sign-in .bcbs-form-panel
+		{
+			margin-bottom:30px;
+		}
+	
+        .bcbs-client-form .bcbs-client-form-sign-in .bcbs-form-panel+div
+        {
+            text-align:right;
+        }
+        
+			.bcbs-client-form .bcbs-client-form-sign-in .bcbs-form-panel+div>a
+			{
+				display:inline-block;
+			}
+
+/******************************************************************************/
+/* Quantity		                                                              */
+/******************************************************************************/
+
+.bcbs-main .bcbs-quantity
+{
+	display:inline-block;
+}
+
+	.bcbs-main .bcbs-quantity>*
+	{
+		float:left;
+		text-align:center;
+	}
+
+	.bcbs-main .bcbs-quantity>a
+	{
+		width:32px;
+		height:32px;
+		display:block;
+		margin-top:5px;
+		line-height:34px;
+		border-radius:999em;
+	}
+	
+	.bcbs-main .bcbs-quantity>input
+	{
+		width:50px;
+		padding:10px;
+		border:none;
+		background:transparent;
+	}
+
+/******************************************************************************/
+/* Booking extra                                                              */
+/******************************************************************************/
+
+.bcbs-main .bcbs-boat-list+.bcbs-booking-extra-list
+{
+	margin-top:60px;
+}
+
+.bcbs-main .bcbs-booking-extra-list
+{
+    
+}
+
+    .bcbs-main .bcbs-booking-extra-list>ul
+    {
+       
+    }
+    
+        .bcbs-main .bcbs-booking-extra-list>ul>li
+        {
+            display:flex;
+			padding:30px;
+			margin-top:20px;
+			flex-direction:row;
+        }
+		
+		.bcbs-main .bcbs-booking-extra-list>ul>li:first-child
+		{
+			margin-top:0px;
+		}
+		
+			.bcbs-main .bcbs-booking-extra-list>ul>li>div
+			{
+				
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li>div:first-child
+			{
+				flex-grow:1;
+			}
+		
+				.bcbs-main .bcbs-booking-extra-list>ul>li>div>.bcbs-button
+				{
+					display:block;
+					min-width:130px;
+					text-align:center;
+				}
+			
+				.bcbs-main .bcbs-booking-extra-list>ul>li>div>.bcbs-button:after
+				{
+					padding-left:10px;
+					display:inlline-block;
+				}
+				
+			.bcbs-main .bcbs-booking-extra-list>ul>li>div:first-child+div
+			{
+				padding-left:30px;
+				padding-right:30px;
+				min-width:210px;
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li>div:first-child+div+div
+			{
+				
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-booking-extra-name,
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-booking-extra-price
+			{
+				margin-bottom:0px;
+				display:inline-block;
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-booking-extra-namen+.bcbs-booking-extra-description,
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-booking-extra-price+.bcbs-booking-extra-description
+			{
+				margin-top:20px;
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-quantity
+			{
+				top:5px;
+				position:relative;
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-booking-extra-price
+			{
+				clear:both;
+				display:block;
+				margin-top:5px;
+			}
+			
+			.bcbs-main .bcbs-booking-extra-list>ul>li .bcbs-booking-extra-description
+			{
+				padding:0px;
+				margin:0px;
+			}
+            
+/******************************************************************************/
+/* Booking complete                                                           */
+/******************************************************************************/
+
+.bcbs-main .bcbs-booking-complete
+{
+    text-align:center;
+    margin:200px auto 200px auto !important;
+}
+
+    .bcbs-main .bcbs-booking-complete .bcbs-meta-icon-96-summary
+    {
+		position:relative;
+		display:inline-block;
+		text-align:center;
+    }
+    
+    .bcbs-main .bcbs-booking-complete .bcbs-meta-icon-96-summary:before
+    {
+        z-index:3;
+		font-size:96px;
+        position:relative;
+    }
+        
+        .bcbs-main .bcbs-booking-complete .bcbs-meta-icon-96-summary>div
+        {
+            top:0px;
+            left:30px;
+            z-index:2;
+            width:96px;
+            height:96px;
+            position:absolute;
+            border-radius:999em;
+			background-color:rgba(37,77,120,0.15);
+        }
+    
+	.bcbs-main .bcbs-booking-complete h2
+	{
+		margin:0px;
+		padding:0px;
+        margin-top:30px;
+	}
+		
+	.bcbs-main .bcbs-booking-complete .bcbs-booking-complete-payment 
+	{
+		
+	}
+	
+		.bcbs-main .bcbs-booking-complete .bcbs-booking-complete-payment>div
+		{
+			display:none;
+			padding-top:10px;  
+		}
+    
+			.bcbs-main .bcbs-booking-complete .bcbs-booking-complete-payment>div>span
+			{
+				font-weight:400;
+			}
+        
+			.bcbs-main .bcbs-booking-complete .bcbs-booking-complete-payment>div>a
+			{
+				margin-top:20px;
+				display:inline-block;
+			}
+
+.bcbs-main form[name="bcbs-form-stripe"]
+{
+    display:none !important;
+}
+
+/******************************************************************************/
+/* Marina detail frame														  */
+/******************************************************************************/
+
+#bcbs-marina-info-frame
+{
+    left:20px;
+    z-index:2;
+	bottom:20px;
+    position:absolute;
+}
+
+#bcbs-marina-info-frame,
+#bcbs-marina-info-frame>div
+{
+    display:none;
+	width:calc(100% - 20px);
+}
+
+    #bcbs-marina-info-frame>div
+    {
+        position:relative;
+        background:#FFFFFF;
+    }
+	
+	/**************************************************************************/
+	/* Marina detail frame / Layout											  */
+	/**************************************************************************/
+    
+	#bcbs-marina-info-frame .bcbs-layout-r1
+	{
+		display:flex;
+		flex-direction:row;
+	}
+	
+		#bcbs-marina-info-frame .bcbs-layout-r1-c1
+		{
+			width:150px;
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+		}
+				
+		#bcbs-marina-info-frame .bcbs-layout-r1-c2
+		{
+			flex-grow:1;
+			padding:22px 30px 35px 30px;
+		}
+		
+			#bcbs-marina-info-frame .bcbs-layout-r1-c2-r1
+			{
+				display:flex;
+				flex-basis:50%;
+				margin-top:20px;
+				flex-direction:row;
+			}
+		
+				#bcbs-marina-info-frame .bcbs-layout-r1-c2-r1-c1,
+				#bcbs-marina-info-frame .bcbs-layout-r1-c2-r1-c2
+				{
+					flex-basis:50%;
+				}
+			
+				#bcbs-marina-info-frame .bcbs-layout-r1-c2-r1-c1
+				{
+					
+				}
+				
+				#bcbs-marina-info-frame .bcbs-layout-r1-c2-r1-c2
+				{
+					
+				}	
+				
+	/**************************************************************************/
+	/* Marina detail frame / Marina name									  */
+	/**************************************************************************/
+		
+	#bcbs-marina-info-frame .bcbs-marina-info-frame-marina-name
+	{
+		position:relative;
+		margin-bottom:5px;
+		padding-right:60px;
+	}
+	
+		#bcbs-marina-info-frame .bcbs-marina-info-frame-marina-name>span
+		{
+			top:5px;
+			right:0px;
+			font-size:18px;
+			cursor:pointer;
+			position:absolute;
+		}
+	
+	/**************************************************************************/
+	/* Marina detail frame / Button											  */
+	/**************************************************************************/
+	
+	#bcbs-marina-info-frame .bcbs-button
+	{
+		bottom:20px;
+		position:absolute;
+		margin-top:20px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+    /**************************************************************************/
+    /* Responsive / Header                                                    */
+    /**************************************************************************/
+
+	.bcbs-main.bcbs-widthlt-960 h2
+	{
+		font-size:28px;
+		line-height:36px;		
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 h3
+	{
+		font-size:22px;
+		line-height:30px;		
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 h4
+	{
+		font-size:17px;
+		line-height:26px;		
+	}
+
+	.bcbs-main.bcbs-widthlt-300 h2
+	{
+		font-size:24px;
+		line-height:32px;	
+	}
+
+    /**************************************************************************/
+    /* Responsive / Layout                                                    */
+    /**************************************************************************/
+
+    .bcbs-main.bcbs-width-480 .bcbs-main-content-step-1>div,
+    .bcbs-main.bcbs-width-300 .bcbs-main-content-step-1>div
+    {
+        display:block;
+    }
+    
+    .bcbs-main.bcbs-width-480 .bcbs-layout-50x50 .bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-50x50 .bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-50x50 .bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-50x50 .bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-25x75>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-25x75>.bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-25x75>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-25x75>.bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-33x33x33>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-33x33x33>.bcbs-layout-column-center,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-33x33x33>.bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-33x33x33>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-33x33x33>.bcbs-layout-column-center,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-33x33x33>.bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-480 .bcbs-main-content-step-1>div>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-main-content-step-1>div>.bcbs-layout-column-right,
+    .bcbs-main.bcbs-width-300 .bcbs-main-content-step-1>div>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-main-content-step-1>div>.bcbs-layout-column-right
+    {
+        clear:both;
+        width:100%;
+        float:none;
+        margin-left:0px;
+        margin-right:0px;
+    }
+
+    .bcbs-main.bcbs-width-480 .bcbs-layout-25x75>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-25x75>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-50x50 .bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-50x50 .bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-33x33x33>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-33x33x33>.bcbs-layout-column-center,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-33x33x33>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-300 .bcbs-layout-33x33x33>.bcbs-layout-column-center
+    {
+        margin-bottom:40px;
+    }
+    
+    .bcbs-main.bcbs-width-300 .bcbs-layout-25x75,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-25x75
+    {
+        display:flex;
+        flex-direction:column-reverse;
+    }
+    
+    .bcbs-main.bcbs-width-300 .bcbs-layout-25x75>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-layout-25x75>.bcbs-layout-column-left
+    {
+        margin-top:40px;
+    }
+
+    /**************************************************************************/
+    /* Responsive / Main navigation                                           */
+    /**************************************************************************/
+
+    .bcbs-main.bcbs-width-300 .bcbs-main-navigation-default
+    {
+        display:none;
+    }
+
+    .bcbs-main.bcbs-width-300 .bcbs-main-navigation-responsive
+    {
+        display:block;
+    }
+
+    /**************************************************************************/
+    /* Responsive / Step                                                      */
+    /**************************************************************************/
+
+	.bcbs-main.bcbs-width-300 .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50,
+	.bcbs-main.bcbs-width-480 .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50
+	{
+		display:block;
+	}
+
+	.bcbs-main.bcbs-width-300 .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-left,
+	.bcbs-main.bcbs-width-300 .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-right,
+	.bcbs-main.bcbs-width-480 .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-left,
+	.bcbs-main.bcbs-width-480 .bcbs-main-content .bcbs-main-content-step-1>.bcbs-layout-50x50>.bcbs-layout-column-right
+	{
+		width:100%;
+	}
+	
+    .bcbs-main.bcbs-width-300 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left
+    {
+        border:none;
+        padding:0px;
+    }
+	
+    .bcbs-main.bcbs-width-300 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-right
+    {
+        border:none;
+    }
+    
+    .bcbs-main.bcbs-width-480 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-768 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left
+    {
+        margin-bottom:0px;
+    }
+	
+	.bcbs-main.bcbs-widthlt-960 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left
+	{
+		padding:44px 30px 30px 30px;
+	}
+	
+	.bcbs-main.bcbs-width-300 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left,
+	.bcbs-main.bcbs-widthlt-300 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left
+	{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 .bcbs-main-content .bcbs-main-content-step-1 .bcbs-layout-column-left>div:last-child a
+	{
+		margin-top:30px;
+	}
+	
+	/**************************************************************************/
+    /* Responsive / Button                                                    */
+    /**************************************************************************/
+
+    .bcbs-main.bcbs-width-300 .bcbs-button.bcbs-button-style-1,
+    .bcbs-main.bcbs-width-300 .bcbs-button.bcbs-button-style-2,
+    .bcbs-main.bcbs-width-480 .bcbs-button.bcbs-button-style-1,
+    .bcbs-main.bcbs-width-480 .bcbs-button.bcbs-button-style-2
+    {
+        padding:10px 26px 12px 26px;
+    }
+    
+    .bcbs-main.bcbs-width-300 .bcbs-button-checkbox>a,
+    .bcbs-main.bcbs-width-480 .bcbs-button-checkbox>a
+    {
+        padding:13px 20px 14px 20px;
+    }
+    
+    .bcbs-main.bcbs-width-300 .bcbs-button.bcbs-button-step-prev,
+    .bcbs-main.bcbs-width-480 .bcbs-button.bcbs-button-step-prev
+    {
+        padding:10px 26px 15px 18px;
+    }
+    
+    .bcbs-main.bcbs-width-300 .bcbs-button.bcbs-button-step-next,
+    .bcbs-main.bcbs-width-480 .bcbs-button.bcbs-button-step-next
+    {
+        padding:10px 18px 15px 26px;
+    }
+
+    /**************************************************************************/
+    /* Responsive / Button navigation                                         */
+    /**************************************************************************/    
+    
+    .bcbs-main.bcbs-width-300 .bcbs-main-content-navigation-button
+    {
+        display:flex;
+        flex-direction:column;
+    }
+  
+        .bcbs-main.bcbs-width-300 .bcbs-main-content-navigation-button a
+        {
+            width:100%;
+            float:none;
+            text-align:center;
+        }
+
+        .bcbs-main.bcbs-width-300 .bcbs-main-content-navigation-button .bcbs-button.bcbs-button-step-prev
+        {
+            order:2;
+            margin-top:10px;
+        }
+
+        .bcbs-main.bcbs-width-300 .bcbs-main-content-navigation-button .bcbs-button.bcbs-button-step-next
+        {
+            order:1;
+            margin:10px 0px 0px 0px;
+        }	
+	
+    /**************************************************************************/
+    /* Responsive / Boat	                                                  */
+    /**************************************************************************/	
+	
+		/**********************************************************************/
+		/* Responsive / Boat / Layout	                                      */
+		/**********************************************************************/		
+	
+		.bcbs-main.bcbs-widthlt-960 .bcbs-boat .bcbs-layout-r2-c1-r1-c1,
+		.bcbs-main.bcbs-widthlt-960 .bcbs-boat .bcbs-layout-r2-c1-r2-c1
+		{
+			min-width:180px;
+		}
+		
+		.bcbs-main.bcbs-widthlt-960 .bcbs-boat .bcbs-layout-r1_c2
+		{
+			min-height:190px;
+			padding:12px 20px 12px 20px;
+		}
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-layout-r1_c2>div+div
+		{
+			padding-top:10px;
+		}
+		
+		.bcbs-main.bcbs-width-768 .bcbs-boat .bcbs-layout-r1_c1,
+		.bcbs-main.bcbs-width-480 .bcbs-boat .bcbs-layout-r1_c1
+		{
+			max-width:290px;
+		}
+		
+		.bcbs-main.bcbs-width-300 .bcbs-boat .bcbs-layout-r1
+		{
+			flex-direction:column;
+		}
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat .bcbs-layout-r1_c2_r1,
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat .bcbs-layout-r1_c2_r2,
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat .bcbs-layout-r1_c2_r3
+		{
+			flex-direction:column;
+		}
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-layout-r1_c2>div+div
+		{
+			padding-top:35px;
+		}
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-layout-r1_c2>div>div+div
+		{
+			margin-top:20px;
+		}
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat *
+		{
+			text-align:left;
+			align-items:start;
+		}
+		
+		.bcbs-main.bcbs-width-300 .bcbs-boat .bcbs-layout-r2-c1-r1, 
+		.bcbs-main.bcbs-width-300 .bcbs-boat .bcbs-layout-r2-c1-r2
+		{
+			flex-direction:column;
+		}
+		
+		/**********************************************************************/
+		/* Responsive / Boat / Image										  */
+		/**********************************************************************/
+		
+		.bcbs-main.bcbs-width-768 .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image img,
+		.bcbs-main.bcbs-width-480 .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image img
+		{
+			max-width:285px;
+		}
+		.bcbs-main.bcbs-width-300 .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image img,
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat.bcbs-boat-style-1 .bcbs-boat-image img		
+		{
+			max-width:100%;
+		}
+		
+		/**********************************************************************/
+		/* Responsive / Boat / Price										  */
+		/**********************************************************************/	
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat .bcbs-boat-price+span
+		{
+			text-align:left;
+		}
+		
+		/**********************************************************************/
+		/* Responsive / Boat / Button										  */
+		/**********************************************************************/
+		
+		.bcbs-main.bcbs-widthlt-960 .bcbs-boat .bcbs-button
+		{
+			min-width:110px;
+		}
+		
+		/**********************************************************************/
+		/* Responsive / Boat / Attribute									  */
+		/**********************************************************************/
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-boat .bcbs-boat-attribute
+		{
+			flex-direction:column;
+		}
+		
+			.bcbs-main.bcbs-widthlt-300 .bcbs-boat .bcbs-boat-attribute>li
+			{
+				width:100%;
+			}
+		
+    /**************************************************************************/
+    /* Responsive / Booking extra                                             */
+    /**************************************************************************/
+
+	.bcbs-main.bcbs-widthlt-960 .bcbs-booking-extra-list>ul>li>div>.bcbs-button
+	{
+		min-width:110px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 .bcbs-booking-extra-list>ul>li>div:first-child+div
+	{
+		padding-left:20px;
+		padding-right:20px;
+		min-width:160px;		
+	}
+	
+	.bcbs-main.bcbs-width-960 .bcbs-booking-extra-list>ul>li
+	{
+		padding:20px;
+		margin-top:10px;
+	}
+	
+	.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li
+	{
+		display:block;
+	}
+	
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity,
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-select-button
+		{
+			padding:0px;
+			min-width:0px;
+		}
+		
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity
+		{
+			float:left;
+		}
+	
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-select-button
+		{
+			width:100%;
+			padding:0px;
+			margin-top:20px;
+		}
+	
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity,
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity+.bcbs-booking-extra-select-button
+		{
+			width:50%;
+			margin-top:20px;
+		}
+		
+		.bcbs-main.bcbs-width-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity+.bcbs-booking-extra-select-button
+		{
+			margin-left:50%;
+			text-align:center;
+		}
+		
+	.bcbs-main.bcbs-widthlt-300 .bcbs-booking-extra-list>ul>li
+	{
+		display:flex;
+		flex-direction:column;
+	}
+		
+		.bcbs-main.bcbs-widthlt-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity
+		{
+			text-align:center;
+		}
+
+		.bcbs-main.bcbs-widthlt-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity,
+		.bcbs-main.bcbs-widthlt-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-select-button,
+		.bcbs-main.bcbs-widthlt-300 .bcbs-booking-extra-list>ul>li>.bcbs-booking-extra-quantity+.bcbs-booking-extra-select-button
+		{
+			float:none;
+			width:100%;
+			margin:0px;
+			padding:0px;
+			margin-top:20px;			
+		}
+		
+    /**************************************************************************/
+    /* Responsive / Payment		                                              */
+    /**************************************************************************/		
+
+	.bcbs-main.bcbs-widthlt-960 #bcbs-payment>ul>li
+	{
+		margin-top:10px;
+		padding:33px 20px 33px 20px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-payment>ul>li>*
+	{
+		float:none;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+	}
+
+	.bcbs-main.bcbs-widthlt-300 #bcbs-payment>ul>li>a
+	{
+		margin-top:20px;
+	}
+	
+    /**************************************************************************/
+    /* Responsive / Marina info frame	                                      */
+    /**************************************************************************/   
+	
+	.bcbs-main.bcbs-widthlt-960 #bcbs-marina-info-frame .bcbs-layout-r1-c1
+	{
+		width:120px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 #bcbs-marina-info-frame .bcbs-layout-r1-c2
+	{
+		padding:15px 20px 20px 20px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 #bcbs-marina-info-frame .bcbs-button
+	{
+		padding:14px 23px 15px 23px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-960 #bcbs-marina-info-frame .bcbs-summary
+	{
+		padding:0px;
+	}
+	
+	.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame .bcbs-layout-r1
+	{
+		
+	}
+	
+		.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame .bcbs-layout-r1 .bcbs-layout-r1-c1,
+		.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-layout-r1 .bcbs-layout-r1-c1
+		{
+			width:100px;
+		}
+		
+		.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-layout-r1-c2-r1
+		{
+			flex-direction:column;
+		}
+		
+	.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame .bcbs-button,
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-button
+	{
+		padding:14px 16px 15px 15px;
+	}
+	
+	.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame,
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame
+	{
+		left:0px;
+		bottom:0px;
+	}
+	
+	.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame,
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame>div,
+	.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame>div,
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame>div
+	{
+		width:100%;
+	}
+	
+	.bcbs-main.bcbs-width-300 #bcbs-marina-info-frame div,
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame div
+	{
+		font-size:14px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-layout-r1
+	{
+		flex-direction:column;
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-layout-r1 .bcbs-layout-r1-c1
+	{
+		width:100%;
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-layout-r1 .bcbs-layout-r1-c2
+	{
+		padding-left:0px;
+		padding-right:0px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-button
+	{
+		right:20px;
+		bottom:unset;
+		margin-top:25px;	
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame img
+	{
+		max-width:100px;
+	}
+	
+	.bcbs-main.bcbs-widthlt-300 #bcbs-marina-info-frame .bcbs-layout-r1-c1
+	{
+		align-items:flex-start;
+	}
+	
+	/**************************************************************************/
+	/* Responsive / Summary                                                   */
+	/**************************************************************************/
+		
+	.bcbs-main.bcbs-widthlt-960 .bcbs-summary
+	{
+		padding:25px 20px 30px 20px;
+	}
+	
+	/**************************************************************************/
+	/* Responsive / Summary price element			                          */
+	/**************************************************************************/
+	
+	.bcbs-main.bcbs-widthlt-960 .bcbs-summary-price-element
+	{
+		padding:25px 20px 30px 20px;
+	}
+	
+    /**************************************************************************/
+    /* Responsive / Summary field                                             */
+    /**************************************************************************/
+
+    .bcbs-main.bcbs-width-300 .bcbs-summary-field .bcbs-layout-50x50 .bcbs-layout-column-left,
+    .bcbs-main.bcbs-width-480 .bcbs-summary-field .bcbs-layout-50x50 .bcbs-layout-column-left
+    {
+        margin-bottom:20px;
+    }
+
+    /**************************************************************************/
+    /* Responsive / Form field                                                */
+    /**************************************************************************/    
+    
+    .bcbs-main.bcbs-width-300 .bcbs-form-field.bcbs-form-field-width-50
+    {
+        width:100%;
+        float:none;
+    }
+
+    .bcbs-main.bcbs-width-300 .bcbs-form-field.bcbs-form-field-width-50+.bcbs-form-field.bcbs-form-field-width-50
+    {
+        border-left-width:1px;
+    }
+    
+    .bcbs-width-300.bcbs-main .bcbs-form-field-width-33,
+    .bcbs-width-300.bcbs-main .bcbs-form-field-width-33+.bcbs-form-field-width-33,
+    .bcbs-width-300.bcbs-main .bcbs-form-field-width-33+.bcbs-form-field-width-33+.bcbs-form-field-width-33
+    {
+        width:100%;
+        float:none;
+        border-left-width:1px;
+    }
+
+    /**************************************************************************/
+    /* Responsive / Screen size                                               */
+    /**************************************************************************/ 
+    
+	@media (max-width:768px)
+	{
+		html .bcbs-main.ui-datepicker
+		{
+			padding:15px 10px 15px 10px;
+		}
+
+		html .bcbs-main.ui-datepicker td a, 
+		html .bcbs-main.ui-datepicker td span
+		{
+			width:40px !important;
+			height:40px !important;
+			line-height:40px !important;
+		}
+
+		html .bcbs-main.ui-datepicker td a.ui-state-hover
+		{
+			line-height:36px !important;
+		}
+
+		html .bcbs-main.ui-datepicker td,
+		html .bcbs-main.ui-datepicker td a 
+		{
+			font-size:14px;
+		}
+
+		html .bcbs-main.ui-datepicker .ui-datepicker-title 
+		{
+			font-size:14px;
+		}
+
+		html .bcbs-main.ui-datepicker .ui-datepicker-next, 
+		html .bcbs-main.ui-datepicker .ui-datepicker-next-hover 
+		{
+			margin-right:0px;
+		}
+
+		html .bcbs-main.ui-datepicker .ui-datepicker-prev,
+		html .bcbs-main.ui-datepicker .ui-datepicker-prev-hover
+		{
+			margin-left:0px;
+		}
+
+		html .bcbs-main.ui-datepicker .ui-datepicker-header 
+		{
+			padding:0.7em 0px;
+		}  
+	}
+
+/******************************************************************************/
+/* WooCommerce                                                                */
+/******************************************************************************/
+
+html .bcbs-main #payment
+{
+    border-radius:0px;
+}
+
+html .bcbs-main #payment,
+html .bcbs-main #payment .form-row
+{
+    background:none;
+}
+
+html .bcbs-main #payment .form-row
+{
+    padding:0px;
+    padding-top:20px;
+}
+
+html .bcbs-main #payment .wc_payment_methods
+{
+    border:none;
+    background-color:#F9F9F9;
+    padding:28px 20px 28px 20px;
+}
+
+    html .bcbs-main #payment .wc_payment_methods .wc_payment_method
+    {
+        
+    }
+    
+        html .bcbs-main #payment .wc_payment_methods .wc_payment_method input[type="radio"]
+        {
+            cursor:pointer;
+        }
+    
+        html .bcbs-main #payment .wc_payment_methods .wc_payment_method label
+        {
+            top:-2px;
+			position:relative;
+        }
+    
+            html .bcbs-main #payment .wc_payment_methods .wc_payment_method label a,
+            html .bcbs-main #payment .wc_payment_methods .wc_payment_method label img
+            {
+                display:none;
+            }
+
+        html .bcbs-main #payment .wc_payment_methods .wc_payment_method .payment_box
+        {
+            margin:0px;
+            border:none;
+            padding:0px;
+            position:static;
+            background:none;
+            padding-left:30px;
+        }
+
+        html .bcbs-main #payment .payment_box::before
+        {
+            border:none;
+        }
+
+            html .bcbs-main #payment .payment_box p
+            {
+                opacity:0.5;
+                margin-top:0px;
+                padding-top:5px;
+            }
+            
+html .bcbs-main .woocommerce-notice
+{
+    margin:0px;
+    padding:10px;
+    font-size:16px;
+    font-weight:500;
+    border-style:solid;
+    border-width:0px 0px 0px 4px;
+}
+
+html .bcbs-main .woocommerce-notice.woocommerce-notice--success,
+html .bcbs-main .woocommerce-notice.woocommerce-notice--error
+{
+    background-color:#F9F9F9;
+    border-left-color:#E9E9E9;
+}
+
+/******************************************************************************/
+/* Bug fixes                                                                  */
+/******************************************************************************/
+
+#ui-datepicker-div,
+.bcbs-main .ui-selectmenu-menu,
+.bcbs-main .ui-timepicker-wrapper
+{
+    z-index:99999 !important;
+}
+
+.gmnoprint
+{
+    font-size:14px !important;
+    font-weight:400 !important;
+    font-family:Lato !important;
+}
+
+.gm-style
+{
+    font:400 14px Lato !important;
+}
+
+/******************************************************************************/
+/* Widget                                                                     */
+/******************************************************************************/
+
+	.bcbs-main.bcbs-booking-form-widget-mode .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left>h2
+	{
+		display:none;
+	}
+
+    /**************************************************************************/
+    /* Widget style 1                                                         */
+    /**************************************************************************/
+
+    /**************************************************************************/
+    /* Widget style 2                                                         */
+    /**************************************************************************/
+
+	.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1 .bcbs-form-field.bcbs-form-field-icon>span:first-child
+	{
+		display:none;
+	}
+	
+	.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1 .bcbs-form-field.bcbs-form-field-icon>label, 
+	.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1.bcbs-form-field.bcbs-form-field-icon>input, 
+	.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1.bcbs-form-field.bcbs-form-field-icon>textarea, 
+	.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1 .bcbs-form-field.bcbs-form-field-icon .ui-selectmenu-button
+	{
+		padding-left:20px;
+	}
+	
+    .bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left
+    {
+        display:flex;
+		flex-direction:column;
+    }
+	
+            .bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left .bcbs-form-panel .bcbs-form-panel-content
+            {
+                display:flex;
+				border-left:solid 1px;
+            }
+			
+				.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left .bcbs-form-panel .bcbs-form-panel-content .bcbs-form-field
+				{
+					border-left:none;
+				}
+	
+	.bcbs-main.bcbs-booking-form-widget-mode.bcbs-booking-form-widget-mode-style-2.bcbs-widthlt-960 .bcbs-main-content .bcbs-main-content-step-1>div>.bcbs-layout-column-left .bcbs-form-panel .bcbs-form-panel-content
+	{
+		flex-direction:column;
+	}
+	
+/******************************************************************************/
+/*	Boat availability calendar							            			      */
+/******************************************************************************/
+
+.bcbs-main.bcbs-boat-availability-calendar
+{
+	width:1128px;
+	max-width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+
+.bcbs-main.bcbs-state-load.bcbs-boat-availability-calendar
+{
+	height:0px;
+	overflow:hidden;
+}
+
+	.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-header
+	{
+		display:flex;
+		margin-bottom:40px;
+	}
+	
+		.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-header>h2
+		{
+			flex-grow:1;
+			margin-right:20px;
+			margin-bottom:0px;
+			display:inline-block;
+		}
+
+		.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-header>a
+		{
+			width:40px;
+			height:40px;
+			display:block;
+			font-size:18px;
+			margin-left:5px;	
+			line-height:40px;
+			text-align:center;
+			align-self:center;
+			border-radius:999em;
+			text-decoration:none;
+		}
+
+		.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-header>a:hover
+		{
+		
+		}
+		
+			.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-header>a>span
+			{
+				display:block;
+				margin-top:10px;
+				margin-left:-3px;
+				transform:scaleX(-1);
+				-moz-transform:scaleX(-1);
+				-o-transform:scaleX(-1);
+				-webkit-transform:scaleX(-1);			
+			}
+
+			.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-header>a+a>span
+			{
+				margin-left:3px;
+				transform:none;
+				-moz-transform:none;
+				-o-transform:none;
+				-webkit-transform:none;			
+			}
+		
+	.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar
+	{
+
+	}
+	
+		.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table
+		{
+			width:100%;
+			border-collapse:collapse;
+		}
+		
+			.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table thead
+			{
+				
+			}
+		
+			.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tbody
+			{
+				
+			}
+		
+			.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr
+			{
+				
+			}
+			
+				.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr th,
+				.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr td
+				{
+					width:12.2857%;
+					border-width:1px;
+					border-style:solid;
+				}
+								
+				.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr th
+				{
+					font-size:16px;
+					font-weight:600;
+				}
+				
+					.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr th div
+					{
+						padding:20px;
+					}
+					
+					.bcbs-main.bcbs-boat-availability-calendar.bcbs-boat-availability-calendar-width-300 .bcbs-boat-availability-calendar-calendar table tr th div
+					{
+						padding:10px;
+					}
+					
+				.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr td
+				{
+					padding:10px;
+					font-size:18px;
+					font-weight:600;
+					vertical-align:top;
+				}
+				
+				.bcbs-main.bcbs-boat-availability-calendar.bcbs-boat-availability-calendar-width-300 .bcbs-boat-availability-calendar-calendar table tr td
+				{
+					padding:5px;
+					font-size:14px;
+				}
+				
+					.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr td>div
+					{
+						padding:20px;
+						display:flex;
+						flex-direction:column;
+					}
+					
+					.bcbs-main.bcbs-boat-availability-calendar.bcbs-boat-availability-calendar-width-300 .bcbs-boat-availability-calendar-calendar table tr td>div
+					{
+						padding:5px;
+					}
+					
+					.bcbs-main.bcbs-boat-availability-calendar .bcbs-boat-availability-calendar-calendar table tr td.bcbs-boat-availability-calendar-date-not-available>div
+					{
+						height:100%;
+						border-radius:4px;
+					}
