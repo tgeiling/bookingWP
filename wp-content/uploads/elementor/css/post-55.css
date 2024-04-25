@@ -41,6 +41,15 @@
     font-size: 13px !important;
 }
 
+.bcbs-layout-r2{
+    background-color: #EFF6FA;
+    padding: 0 16px;
+}
+
+.bcbs-main-content-step-3 h3{
+    color: white !important;
+}
+
 @media only screen and (max-width: 767px) {
     .bcbs-main-navigation-responsive div {
         display: none;
@@ -48,7 +57,7 @@
 .bcbs-layout-100{
     width: 90%;
     margin: auto;
-}
+    }
 }/* End custom CSS */
 /* Start custom CSS for shortcode, class: .elementor-element-1095efc */@media only screen and (min-width: 768px) {
     .elementor-shortcode {
