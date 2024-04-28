@@ -1,4 +1,4 @@
-/*! elementor - v3.21.0 - 15-04-2024 */
+/*! elementor - v3.21.0 - 25-04-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -364,10 +364,12 @@ var AiBehavior = /*#__PURE__*/function (_Marionette$Behavior) {
         }
         var rootElement = document.createElement('div');
         document.body.append(rootElement);
+        var mainActionText = isPromotion ? (0, _i18n.__)('Try it for free', 'elementor') : (0, _i18n.__)('Try it now', 'elementor');
         var _ReactUtils$render2 = _react2.default.render( /*#__PURE__*/_react.default.createElement(_aiPromotionInfotipWrapper.default, {
             anchor: $button[0],
             header: promotionTexts.header,
             contentText: promotionTexts.contentText,
+            mainActionText: mainActionText,
             controlType: controlType,
             unmountAction: function unmountAction() {
               unmount();
@@ -675,13 +677,14 @@ var AiPromotionInfotipContent = function AiPromotionInfotipContent(props) {
       return props.onClick();
     },
     variant: "contained"
-  }, (0, _i18n.__)('Try it now', 'elementor'))));
+  }, props.mainActionText)));
 };
 AiPromotionInfotipContent.propTypes = {
   header: PropTypes.string,
   contentText: PropTypes.string,
   onClick: PropTypes.func,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  mainActionText: PropTypes.string
 };
 var _default = AiPromotionInfotipContent;
 exports["default"] = _default;
@@ -719,7 +722,8 @@ var AiPromotionInfotipWrapper = function AiPromotionInfotipWrapper(_ref) {
     isRTL = _ref.isRTL,
     clickAction = _ref.clickAction,
     placement = _ref.placement,
-    offset = _ref.offset;
+    offset = _ref.offset,
+    mainActionText = _ref.mainActionText;
   var focusOutListener = (0, _focusOutListener.useFocusOutListener)();
   var _useIntroduction = (0, _useIntroduction2.default)("ai_promotion_introduction_".concat(controlType)),
     isViewed = _useIntroduction.isViewed,
@@ -745,6 +749,7 @@ var AiPromotionInfotipWrapper = function AiPromotionInfotipWrapper(_ref) {
       focusOutListener: focusOutListener,
       header: header,
       contentText: contentText,
+      mainActionText: mainActionText,
       onClose: function onClose() {
         markAsViewed();
         focusOutListener.remove();
@@ -773,7 +778,8 @@ AiPromotionInfotipWrapper.propTypes = {
   isRTL: PropTypes.bool,
   clickAction: PropTypes.func,
   placement: PropTypes.string,
-  offset: PropTypes.object
+  offset: PropTypes.object,
+  mainActionText: PropTypes.string
 };
 var _default = AiPromotionInfotipWrapper;
 exports["default"] = _default;
@@ -1418,6 +1424,10 @@ var PromptErrorMessage = function PromptErrorMessage(_ref) {
         description: (0, _i18n.__)('Try exiting Elementor and sign in again.', 'elementor'),
         buttonText: (0, _i18n.__)('Reconnect', 'elementor'),
         buttonAction: onRetry
+      },
+      file_too_large: {
+        text: /*#__PURE__*/_react.default.createElement(_ui.AlertTitle, null, (0, _i18n.__)('The file is too large.', 'elementor')),
+        description: (0, _i18n.__)('Please upload a file that is less than 4MB.', 'elementor')
       }
     };
     return messages[errMsg] || messages.default;
@@ -3503,6 +3513,7 @@ UpgradeChip.propTypes = {
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
+/* provided dependency */ var sprintf = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n")["sprintf"];
 /* provided dependency */ var __ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n")["__"];
 /* provided dependency */ var PropTypes = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
 
@@ -3521,22 +3532,31 @@ var _excluded = ["onClose", "usagePercentage", "hasSubscription"];
 var _title, _description, _url, _title2, _description2, _url2, _title3, _description3, _url3;
 var KEY_SUBSCRIPTION = 'subscription';
 var KEY_NO_SUBSCRIPTION = 'noSubscription';
+var getUsageTitle = function getUsageTitle(percentage) {
+  // Translators: %s refers to the credits percentage usage
+  return sprintf(__('You’ve used %s of credits for this AI feature.', 'elementor'), percentage);
+};
+var CREDITS_95_USAGE_TITLE = getUsageTitle('95%');
+var CREDITS_80_USAGE_TITLE = getUsageTitle('80%');
+var CREDITS_75_USAGE_TITLE = getUsageTitle('75%');
+var DESCRIPTION_SUBSCRIPTION = __('Get maximum access.', 'elementor');
+var DESCRIPTION_NO_SUBSCRIPTION = __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor');
 var alertConfigs = [{
   threshold: 95,
-  title: (_title = {}, (0, _defineProperty2.default)(_title, KEY_SUBSCRIPTION, __('You’ve used over 95% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title, KEY_NO_SUBSCRIPTION, __('You’ve used 95% of credits for this AI feature.', 'elementor')), _title),
-  description: (_description = {}, (0, _defineProperty2.default)(_description, KEY_SUBSCRIPTION, __('Get maximum access.', 'elementor')), (0, _defineProperty2.default)(_description, KEY_NO_SUBSCRIPTION, __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor')), _description),
+  title: (_title = {}, (0, _defineProperty2.default)(_title, KEY_SUBSCRIPTION, CREDITS_95_USAGE_TITLE), (0, _defineProperty2.default)(_title, KEY_NO_SUBSCRIPTION, CREDITS_95_USAGE_TITLE), _title),
+  description: (_description = {}, (0, _defineProperty2.default)(_description, KEY_SUBSCRIPTION, DESCRIPTION_SUBSCRIPTION), (0, _defineProperty2.default)(_description, KEY_NO_SUBSCRIPTION, DESCRIPTION_NO_SUBSCRIPTION), _description),
   url: (_url = {}, (0, _defineProperty2.default)(_url, KEY_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-paid-95-limit-reach/'), (0, _defineProperty2.default)(_url, KEY_NO_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-free-95-limit-reach/'), _url),
   color: 'error'
 }, {
   threshold: 80,
-  title: (_title2 = {}, (0, _defineProperty2.default)(_title2, KEY_SUBSCRIPTION, __('You’ve used over 80% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title2, KEY_NO_SUBSCRIPTION, __('You’ve used 80% of credits for this AI feature.', 'elementor')), _title2),
-  description: (_description2 = {}, (0, _defineProperty2.default)(_description2, KEY_SUBSCRIPTION, __('Get maximum access.', 'elementor')), (0, _defineProperty2.default)(_description2, KEY_NO_SUBSCRIPTION, __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor')), _description2),
+  title: (_title2 = {}, (0, _defineProperty2.default)(_title2, KEY_SUBSCRIPTION, CREDITS_80_USAGE_TITLE), (0, _defineProperty2.default)(_title2, KEY_NO_SUBSCRIPTION, CREDITS_80_USAGE_TITLE), _title2),
+  description: (_description2 = {}, (0, _defineProperty2.default)(_description2, KEY_SUBSCRIPTION, DESCRIPTION_SUBSCRIPTION), (0, _defineProperty2.default)(_description2, KEY_NO_SUBSCRIPTION, DESCRIPTION_NO_SUBSCRIPTION), _description2),
   url: (_url2 = {}, (0, _defineProperty2.default)(_url2, KEY_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-paid-80-limit-reach/'), (0, _defineProperty2.default)(_url2, KEY_NO_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-free-80-limit-reach/'), _url2),
   color: 'warning'
 }, {
   threshold: 75,
-  title: (_title3 = {}, (0, _defineProperty2.default)(_title3, KEY_SUBSCRIPTION, __('You’ve used over 75% of your Elementor AI plan.', 'elementor')), (0, _defineProperty2.default)(_title3, KEY_NO_SUBSCRIPTION, __(' You’ve used 75% of credits for this AI feature.', 'elementor')), _title3),
-  description: (_description3 = {}, (0, _defineProperty2.default)(_description3, KEY_SUBSCRIPTION, __('Get maximum access.', 'elementor')), (0, _defineProperty2.default)(_description3, KEY_NO_SUBSCRIPTION, __('Upgrade now to keep using this feature. You still have credits for other AI features (Text, Code, Images, Containers, etc.)', 'elementor')), _description3),
+  title: (_title3 = {}, (0, _defineProperty2.default)(_title3, KEY_SUBSCRIPTION, CREDITS_75_USAGE_TITLE), (0, _defineProperty2.default)(_title3, KEY_NO_SUBSCRIPTION, CREDITS_75_USAGE_TITLE), _title3),
+  description: (_description3 = {}, (0, _defineProperty2.default)(_description3, KEY_SUBSCRIPTION, DESCRIPTION_SUBSCRIPTION), (0, _defineProperty2.default)(_description3, KEY_NO_SUBSCRIPTION, DESCRIPTION_NO_SUBSCRIPTION), _description3),
   url: (_url3 = {}, (0, _defineProperty2.default)(_url3, KEY_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-paid-80-limit-reach/'), (0, _defineProperty2.default)(_url3, KEY_NO_SUBSCRIPTION, 'https://go.elementor.com/ai-banner-free-80-limit-reach/'), _url3),
   color: 'warning'
 }];
@@ -3679,7 +3699,17 @@ var VoicePromotionAlert = function VoicePromotionAlert(props) {
       }
     }),
     onClose: markAsViewed
-  }, __('Get improved results from AI by adding some personal context. Go to Site Settings > AI Context to get started.')));
+  }, __('Get improved results from AI by adding personal context.', 'elementor'), /*#__PURE__*/_react.default.createElement(_ui.Link, {
+    onClick: function onClick() {
+      return $e.route('panel/global/menu');
+    },
+    className: "elementor-clickable",
+    style: {
+      textDecoration: 'none'
+    },
+    color: "info.main",
+    href: "#"
+  }, __('Let’s do it', 'elementor'))));
 };
 exports.VoicePromotionAlert = VoicePromotionAlert;
 VoicePromotionAlert.propTypes = {
@@ -3871,9 +3901,13 @@ var MONTH_JANUARY_INDEX = 0;
 exports.MONTH_JANUARY_INDEX = MONTH_JANUARY_INDEX;
 var translateDate = function translateDate(format, date, timezone) {
   var _window$wp;
-  var _window$wp$date = (_window$wp = window.wp) === null || _window$wp === void 0 ? void 0 : _window$wp.date,
-    dateI18n = _window$wp$date.dateI18n;
-  return dateI18n(format, date, timezone);
+  if ((_window$wp = window.wp) !== null && _window$wp !== void 0 && _window$wp.date) {
+    var _window$wp2;
+    var _window$wp$date = (_window$wp2 = window.wp) === null || _window$wp2 === void 0 ? void 0 : _window$wp2.date,
+      dateI18n = _window$wp$date.dateI18n;
+    return dateI18n(format, date, timezone);
+  }
+  return date;
 };
 
 /**
@@ -5626,6 +5660,8 @@ var Module = /*#__PURE__*/function (_elementorModules$edi) {
         var _elementor, _elementor$getPrefere;
         var rootElement = document.createElement('div');
         document.body.append(rootElement);
+        var isPromotion = !window.ElementorAiConfig.is_get_started;
+        var mainActionText = isPromotion ? (0, _i18n.__)('Try it for free', 'elementor') : (0, _i18n.__)('Try it now', 'elementor');
         var _ReactUtils$render = _react2.default.render( /*#__PURE__*/_react.default.createElement(_aiPromotionInfotipWrapper.default, {
             "test-id": "ai-promotion-infotip-wrapper",
             anchor: element,
@@ -5634,6 +5670,7 @@ var Module = /*#__PURE__*/function (_elementorModules$edi) {
             },
             header: (0, _i18n.__)('Give your workflow a boost.', 'elementor'),
             contentText: (0, _i18n.__)('Build containers with AI and generate any layout you’d need for your site’s design.', 'elementor'),
+            mainActionText: mainActionText,
             controlType: 'container',
             unmountAction: function unmountAction() {
               unmount();
@@ -7278,7 +7315,8 @@ Container.propTypes = {
 };
 var ImagesDisplay = function ImagesDisplay(_ref2) {
   var images = _ref2.images,
-    aspectRatio = _ref2.aspectRatio,
+    _ref2$aspectRatio = _ref2.aspectRatio,
+    aspectRatio = _ref2$aspectRatio === void 0 ? '1:1' : _ref2$aspectRatio,
     onUseImage = _ref2.onUseImage,
     onEditImage = _ref2.onEditImage,
     _ref2$transparentCont = _ref2.transparentContainer,
