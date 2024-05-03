@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Boat Charter Booking System\n"
 "POT-Creation-Date: 2024-03-13 11:46+0100\n"
-"PO-Revision-Date: 2024-04-25 15:45+0200\n"
+"PO-Revision-Date: 2024-05-02 20:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: QuanticaLabs <quanticalabs@gmail.com>\n"
 "Language: de\n"
@@ -424,7 +424,7 @@ msgstr "Buchungs Extras Kategorien"
 
 #: ../class/BCBS.BookingExtra.class.php:461
 msgid " per entire period x quantity"
-msgstr "pro ganzem Zeitraum x Anzahl"
+msgstr "pro ganzem Zeitraum"
 
 #: ../class/BCBS.BookingExtra.class.php:465
 msgid " per day x quantity"
@@ -540,7 +540,7 @@ msgstr "Zurück zum Start"
 msgid ""
 "Plugin cannot find marina. Please make sure that you created at least one "
 "marina and set coordinates for it."
-msgstr "Plugin kann dne angegebenen Hafen nicht finden"
+msgstr "Plugin kann den angegebenen Hafen nicht finden"
 
 #: ../class/BCBS.BookingForm.class.php:805
 msgid ""
