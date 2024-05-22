@@ -327,7 +327,8 @@ class Utils {
 			return $text;
 		}
 
-		$words = preg_split( '/[\s\p{P}]++/u', $text, -1, PREG_SPLIT_NO_EMPTY );
+		$whitespace_pattern = '/\s+/u';
+		$words = preg_split( $whitespace_pattern, $text, -1, PREG_SPLIT_NO_EMPTY );
 
 		if ( count( $words ) > $length ) {
 			$words = array_slice( $words, 0, $length );

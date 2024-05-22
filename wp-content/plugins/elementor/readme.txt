@@ -4,8 +4,8 @@ Tags: page builder, editor, landing page, drag-and-drop, elementor,
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 3.21.3
-Beta tag: 3.21.0-beta3
+Stable tag: 3.21.6
+Beta tag: 3.22.0-beta2
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -250,6 +250,22 @@ You can also add a new language via [translate.wordpress.org](https://go.element
 6. **Motion Effects** - Add entrance animations and transitions to any element in your website to captivate visitors.
 
 == Changelog ==
+
+= 3.21.6 - 2024-05-20 =
+
+* Security Fix: Improved code security enforcement in Icon Box and Image Box widgets
+* Fix: Console error related to the AI tooltip
+* Fix: Redirecting issue in AI Connect flow
+
+= 3.21.5 - 2024-05-08 =
+
+* Tweak: Improved AI Image variations to use an updated and simplified model
+* Fix: Editor History actions are not working as expected when using keyboard shortcuts ([#27030](https://github.com/elementor/elementor/issues/27030), [#25861](https://github.com/elementor/elementor/issues/25861))
+
+= 3.21.4 - 2024-04-30 =
+
+* Fix: Improved code enforcement of post Preview mode ([#25860](https://github.com/elementor/elementor/issues/25622))
+* Fix: Accordion is not displayed as expected when using Safari browser in Accordion widget ([#25905](https://github.com/elementor/elementor/issues/25905), [#25789](https://github.com/elementor/elementor/issues/25789))
 
 = 3.21.3 - 2024-04-25 =
 
