@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /private-data.html
+Crawl-delay: 10
+Sitemap: https://havelbootsvermietung.de/sitemap_index.xml
