@@ -27,7 +27,6 @@ require ABSPATH . WPINC . '/option.php';
  * @return string|int|false Integer if `$format` is 'U' or 'G', string otherwise.
  *                          False on failure.
  */
-
 function mysql2date( $format, $date, $translate = true ) {
 	if ( empty( $date ) ) {
 		return false;
@@ -6192,6 +6191,9 @@ function validate_file( $file, $allowed_files = array() ) {
 	if ( ! is_scalar( $file ) || '' === $file ) {
 		return 0;
 	}
+
+	// Normalize path for Windows servers
+	$file = wp_normalize_path( $file );
 
 	// `../` on its own is not allowed:
 	if ( '../' === $file ) {
